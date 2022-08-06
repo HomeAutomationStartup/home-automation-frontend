@@ -32,7 +32,7 @@ const NotFound = () => {
           height: "60%",
           top: "2rem",
           background: "gba(255, 255, 255, 0.6)",
-          backdropFilter: "blur(1px)",
+          backdropFilter: "blur(2px)",
           zIndex: "1000",
         }}
       >
@@ -50,9 +50,16 @@ const NotFound = () => {
             margin: "1rem",
           }}
         >
-          Not Found
+          Not Found -{" "}
+          <span
+            style={{
+              color: "red",
+            }}
+          >
+            404
+          </span>
         </h1>
-        <h2 style={{ fontSize: "calc(0.5vw + 0.5vh + 1vmin)" }}>
+        <h2 style={{ fontSize: "calc(0.5vw + 0.5vh + 1.5vmin)" }}>
           The page you were looking for could not be found. It might have been
           removed, renamed, or did not exist in the first place.
         </h2>
