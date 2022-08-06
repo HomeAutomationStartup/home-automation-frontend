@@ -12,7 +12,6 @@ const AuthContainer = () => {
   return (
     <div className="authContainer">
       <section className="authContainer_btn">
-        {/* <button onClick={toggleForm}>change</button> */}
         <GreenButton fn={toggleForm} label="click" />
       </section>
       <section className="authContainer_form">

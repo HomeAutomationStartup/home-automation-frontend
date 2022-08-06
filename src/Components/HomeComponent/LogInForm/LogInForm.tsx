@@ -1,9 +1,6 @@
 import { useForm } from "react-hook-form";
 import GreenButton from "../../Others/GreenButton/AuthButton";
 import "./LogInForm.css";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-// (toast as any)?.configure();
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +16,6 @@ const LogInForm = () => {
   });
 
   const onLogSubmit = (data: any) => {
-    //console.log("Log-Data: ", data);
     reset();
     toast.success("Login Successful");
   };
@@ -33,7 +29,7 @@ const LogInForm = () => {
             className="form_field"
             placeholder="User Name"
             style={{
-              marginTop: "20px",
+              marginTop: "10px",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...login("userName", {
@@ -48,7 +44,6 @@ const LogInForm = () => {
                 color: "red",
                 background: "rgb(255, 0, 0, 0.1)",
                 padding: "0.5rem 1.5rem 0.5rem 1.5rem",
-
                 borderRadius: "10px",
                 fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
               }}
@@ -62,8 +57,7 @@ const LogInForm = () => {
             className="form_field"
             placeholder="Password"
             style={{
-              marginTop: "20px",
-
+              marginTop: "10px",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...login("password", {
