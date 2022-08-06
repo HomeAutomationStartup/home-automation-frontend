@@ -1,0 +1,21 @@
+.user,
+.user_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  background: #f4f6f8;
+  width: 100%;
+  height: 120vh;
+  position: relative;
+}
+
+.user_content {
+  width: 95%;
+  height: 95%;
+  text-align: center;
+  text-align: left;
+  background: salmon;
+}
