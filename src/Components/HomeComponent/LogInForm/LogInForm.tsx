@@ -29,7 +29,7 @@ const LogInForm = () => {
             className="form_field"
             placeholder="User Name"
             style={{
-              marginTop: "10px",
+              marginTop: "1rem",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...login("userName", {
@@ -57,7 +57,7 @@ const LogInForm = () => {
             className="form_field"
             placeholder="Password"
             style={{
-              marginTop: "10px",
+              marginTop: "1rem",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...login("password", {

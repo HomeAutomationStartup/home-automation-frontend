@@ -29,7 +29,7 @@ const RegisterForm = () => {
             className="form_field"
             placeholder="User Name"
             style={{
-              marginTop: "10px",
+              marginTop: "1rem",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...registration("userName", {
@@ -57,7 +57,7 @@ const RegisterForm = () => {
             className="form_field"
             placeholder="Name"
             style={{
-              marginTop: "10px",
+              marginTop: "1rem",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...registration("name", {
@@ -85,7 +85,7 @@ const RegisterForm = () => {
             className="form_field"
             placeholder="Password"
             style={{
-              marginTop: "10px",
+              marginTop: "1rem",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...registration("password", {
@@ -113,7 +113,7 @@ const RegisterForm = () => {
             className="form_field"
             placeholder="Email"
             style={{
-              marginTop: "10px",
+              marginTop: "1rem",
               fontSize: "calc(0.5vw + 0.5vh + 1vmin)",
             }}
             {...registration("email", { required: "email is required" })}
@@ -138,14 +138,14 @@ const RegisterForm = () => {
             !regErrors.userName && <GreenButton label="submit" />}
         </form>
 
-        {!regErrors.email &&
+        {/* {!regErrors.email &&
           !regErrors.password &&
           !regErrors.name &&
           !regErrors.userName && (
             <section className="appPolicies">
               <span>Terms &amp; Conditions</span>
             </section>
-          )}
+          )} */}
       </section>
 
       <ToastContainer />
