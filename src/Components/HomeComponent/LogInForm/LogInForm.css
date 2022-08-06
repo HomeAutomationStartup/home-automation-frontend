@@ -15,7 +15,7 @@
   height: 100%;
   position: relative;
   flex-direction: column;
-  background-color: #f4f6f8;
+  background: #f4f6f8;
   transition: 0.5s;
 }
 .form-container {

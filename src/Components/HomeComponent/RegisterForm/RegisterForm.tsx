@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import GreenButton from "../../Others/GreenButton/AuthButton";
+import GreenButton from "../../Others/Button/AuthButton";
 import "./RegisterForm.css";
 
 import { ToastContainer, toast } from "react-toastify";

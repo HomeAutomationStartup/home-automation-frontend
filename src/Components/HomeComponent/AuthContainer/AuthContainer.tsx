@@ -1,7 +1,7 @@
 import { useState } from "react";
 import LogIn from "./../LogInForm/LogInForm";
 import Register from "./../RegisterForm/RegisterForm";
-import GreenButton from "../../Others/GreenButton/AuthButton";
+import GreenButton from "../../Others/Button/AuthButton";
 import "./AuthContainer.css";
 
 const AuthContainer = () => {
