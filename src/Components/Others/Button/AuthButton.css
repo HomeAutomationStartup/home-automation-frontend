@@ -1,32 +1,33 @@
 .greenButton button {
-  width: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: calc(0.5vw + 0.5vh + 1vmin);
-  font-weight: 500;
-  border-radius: 4px;
-  line-height: 16px;
-  text-align: center;
-  border: solid;
-  border-width: 1px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  gap: 8px;
-  -webkit-transition: border-radius 0.15s;
-  transition: border-radius 0.15s;
-  color: #001e2b;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: calc(0.5vw + 0.5vh + 1vmin);
+    font-weight: 500;
+    border-radius: 4px;
+    line-height: 16px;
+    text-align: center;
+    border: solid;
+    border-width: 1px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    display: inline-block;
+    gap: 8px;
+    -webkit-transition: border-radius 0.15s;
+    transition: border-radius 0.15s;
+    /* color: #001e2b;
   stroke: #001e2b;
   fill: #001e2b;
   border-color: #00684a;
-  background-color: #00ed64;
-  transition: 0.5s all ease;
+  background-color: #00ed64; */
+    background: #e2ff00;
+    transition: 0.5s all ease;
 }
 
 .greenButton button:hover {
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-radius: 40px;
-  transition: 0.5s all ease;
+    cursor: pointer;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 0.5s all ease;
 }

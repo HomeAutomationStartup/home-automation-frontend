@@ -1,20 +1,19 @@
 .uiLook,
 .uiLook_content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(21, 26, 30);
 }
 
 .uiLook {
-  background: rgb(22, 28, 36);
-  width: 100%;
-  height: 120vh;
-  position: relative;
+    width: 100%;
+    height: 120vh;
+    position: relative;
 }
 .uiLook_content {
-  width: 95%;
-  height: 95%;
-  color: white;
-  text-align: center;
-  background: salmon;
+    width: 95%;
+    height: 95%;
+    color: white;
+    text-align: center;
 }
