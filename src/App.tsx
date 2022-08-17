@@ -1,5 +1,5 @@
 import Home from './Pages/Home';
-import NotFound from './Pages/NotFound';
+// import NotFound from './Pages/NotFound';
 import './App.css';
 import useWindowDimensions from './Hooks/useWindowDimensions';
 import MobileResWarning from './Pages/MobileResWarning';
