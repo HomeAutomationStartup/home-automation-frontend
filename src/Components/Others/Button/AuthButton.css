@@ -1,4 +1,4 @@
-.greenButton button {
+.authButton button {
     width: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -15,17 +15,12 @@
     gap: 8px;
     -webkit-transition: border-radius 0.15s;
     transition: border-radius 0.15s;
-    /* color: #001e2b;
-  stroke: #001e2b;
-  fill: #001e2b;
-  border-color: #00684a;
-  background-color: #00ed64; */
     background: #e2ff00;
+    cursor: pointer;
     transition: 0.5s all ease;
 }
 
-.greenButton button:hover {
-    cursor: pointer;
+.authButton button:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
     border-radius: 40px;

@@ -1,11 +1,19 @@
 import { useForm } from 'react-hook-form';
 import GreenButton from '../../Others/Button/AuthButton';
 import './LogInForm.css';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LogInForm = () => {
+    const styles = {
+        p: {
+            color: 'red',
+            background: 'rgb(255, 0, 0, 0.1)',
+            padding: '0.5rem 1.5rem 0.5rem 1.5rem',
+            borderRadius: '10px',
+            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+        },
+    };
     const {
         register: login,
         formState: { errors: logErrors },
@@ -48,15 +56,7 @@ const LogInForm = () => {
                         })}
                     />
                     {logErrors.userName && (
-                        <p
-                            style={{
-                                color: 'red',
-                                background: 'rgb(255, 0, 0, 0.1)',
-                                padding: '0.5rem 1.5rem 0.5rem 1.5rem',
-                                borderRadius: '10px',
-                                fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
-                            }}
-                        >
+                        <p style={styles.p}>
                             {(logErrors.userName as any)?.message}
                         </p>
                     )}
@@ -82,15 +82,7 @@ const LogInForm = () => {
                         })}
                     />
                     {logErrors.password && (
-                        <p
-                            style={{
-                                color: 'red',
-                                background: 'rgb(255, 0, 0, 0.1)',
-                                padding: '0.5rem 1.5rem 0.5rem 1.5rem',
-                                borderRadius: '10px',
-                                fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
-                            }}
-                        >
+                        <p style={styles.p}>
                             {(logErrors.password as any)?.message}
                         </p>
                     )}

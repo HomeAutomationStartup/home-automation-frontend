@@ -6,6 +6,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterForm = () => {
+    const styles = {
+        p: {
+            color: 'red',
+            background: 'rgb(255, 0, 0, 0.1)',
+            padding: '0.5rem 1.5rem 0.5rem 1.5rem',
+            borderRadius: '10px',
+            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+        },
+    };
+
     const {
         register: registration,
         formState: { errors: regErrors },
@@ -48,15 +58,7 @@ const RegisterForm = () => {
                         })}
                     />
                     {regErrors.userName && (
-                        <p
-                            style={{
-                                color: 'red',
-                                background: 'rgb(255, 0, 0, 0.1)',
-                                padding: '0.5rem 1.5rem 0.5rem 1.5rem',
-                                borderRadius: '10px',
-                                fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
-                            }}
-                        >
+                        <p style={styles.p}>
                             {(regErrors.userName as any)?.message}
                         </p>
                     )}
@@ -82,15 +84,7 @@ const RegisterForm = () => {
                         })}
                     />
                     {regErrors.name && (
-                        <p
-                            style={{
-                                color: 'red',
-                                background: 'rgb(255, 0, 0, 0.1)',
-                                padding: '0.5rem 1.5rem 0.5rem 1.5rem',
-                                borderRadius: '10px',
-                                fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
-                            }}
-                        >
+                        <p style={styles.p}>
                             {(regErrors.name as any)?.message}
                         </p>
                     )}
@@ -116,15 +110,7 @@ const RegisterForm = () => {
                         })}
                     />
                     {regErrors.password && (
-                        <p
-                            style={{
-                                color: 'red',
-                                background: 'rgb(255, 0, 0, 0.1)',
-                                padding: '0.5rem 1.5rem 0.5rem 1.5rem',
-                                borderRadius: '10px',
-                                fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
-                            }}
-                        >
+                        <p style={styles.p}>
                             {(regErrors.password as any)?.message}
                         </p>
                     )}
@@ -142,15 +128,7 @@ const RegisterForm = () => {
                         })}
                     />
                     {regErrors.email && (
-                        <p
-                            style={{
-                                color: 'red',
-                                background: 'rgb(255, 0, 0, 0.1)',
-                                padding: '0.5rem 1.5rem 0.5rem 1.5rem',
-                                borderRadius: '10px',
-                                fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
-                            }}
-                        >
+                        <p style={styles.p}>
                             {(regErrors.email as any)?.message}
                         </p>
                     )}

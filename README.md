@@ -45,8 +45,20 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+---
+
 framer-motion
 react-hook-form
 react-toastify
+react-icons
+npm i react-simple-star-rating
 
 fontSize: "calc(0.5vw + 0.5vh + 1vmin)"
+
+interface User {
+id: number;
+subtitle: string;
+title: string;
+}
+
+© 2020-present Joshua Comeau. All Rights Reserved.
