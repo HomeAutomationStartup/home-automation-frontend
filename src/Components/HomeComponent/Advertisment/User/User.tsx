@@ -1,13 +1,28 @@
-import "./User.css";
+import UserTestimonial from './../../UserTestimonial/UserTestimonial';
+import './User.css';
 
 const User = () => {
-  return (
-    <div className="user">
-      <section className="user_content">
-        This page is about the User of the App
-      </section>
-    </div>
-  );
+    const styles = {
+        span: {
+            color: '#C70CC4',
+        },
+    };
+    return (
+        <div className="user">
+            <section className="user_content">
+                <section className="user_content_header">
+                    <p>REVIEWS AND FEEDBACK</p>
+                    <h1>
+                        <span style={styles.span}>Here's</span> what people say
+                        about <span style={styles.span}>Open Bridge.</span>
+                    </h1>
+                </section>
+                <section className="user_content_banner">
+                    <UserTestimonial />
+                </section>
+            </section>
+        </div>
+    );
 };
 
 export default User;

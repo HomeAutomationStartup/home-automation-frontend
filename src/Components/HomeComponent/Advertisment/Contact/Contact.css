@@ -1,20 +1,126 @@
 .contact {
-  background: rgb(22, 28, 36);
-  width: 100%;
-  height: 40vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: rgb(21, 26, 30);
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lavender;
 }
 
 .contact_content {
-  width: 95%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: left;
-  background: salmon;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(21, 26, 30);
+}
+.contact_content_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    border-bottom: 1px solid grey;
+}
+
+.contact_content_info_contact {
+    height: 100%;
+    width: 35%;
+}
+/* ******************************************************************************************** */
+.contact_content_info_others {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 100%;
+    width: 65%;
+}
+.contact_content_info_others_list,
+.contact_content_info_contact_list {
+    padding-left: 0px;
+    text-align: left;
+}
+.contact_content_info_others_list {
+    list-style-type: none;
+}
+.contact_content_info_contact_list li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.contact_content_info_contact_list li a:hover,
+.contact_content_info_others_list li a:hover {
+    color: #e2ff00;
+}
+.contact_content_info_contact_list li a,
+.contact_content_info_others_list li a {
+    color: gray;
+    text-decoration: none;
+}
+
+/* ******************************************************************************************** */
+.contact_content_copyright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+.contact_content_copyright_list_row_1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.contact_content_copyright_list_row_1 li {
+    display: inline-block;
+    color: #e8e8e8;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 10px 0 4px;
+    padding: 0 12px;
+    position: relative;
+    border-right: 1px solid gray;
+}
+.contact_content_copyright_list_row_1 li a {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.contact_content_copyright_list_row_1 li a:hover {
+    color: #e2ff00;
+}
+.contact_content_copyright_list_row_1 li:last-child {
+    border-right: none;
+}
+
+/* ******************************************************* */
+.contact_content_copyright_list_row_2 {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.contact_content_copyright_list_row_2 li {
+    display: block;
+    color: #e8e8e8;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 10px 0 4px;
+    padding: 0 12px;
+    position: relative;
+    line-height: 20px;
 }
