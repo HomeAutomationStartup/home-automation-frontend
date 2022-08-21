@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import LogIn from './../LogInForm/LogInForm';
 import Register from './../RegisterForm/RegisterForm';
-import GreenButton from '../../Others/Button/AuthButton';
+import CustButton from '../../Others/Button/CustButton';
 import './AuthContainer.css';
 
 const AuthContainer = () => {
@@ -12,7 +12,12 @@ const AuthContainer = () => {
     return (
         <div className="authContainer">
             <section className="authContainer_btn">
-                <GreenButton fn={toggleForm} label="click" />
+                <CustButton
+                    fn={toggleForm}
+                    label="click"
+                    textCol="black"
+                    backCol="#e2ff00"
+                />
             </section>
             <section className="authContainer_form">
                 {openForm && <LogIn />}

@@ -52,6 +52,9 @@ react-hook-form
 react-toastify
 react-icons
 npm i react-simple-star-rating
+react-router-dom
+react-query
+react-select
 
 fontSize: "calc(0.5vw + 0.5vh + 1vmin)"
 

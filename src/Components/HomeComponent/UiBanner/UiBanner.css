@@ -17,6 +17,18 @@
     scrollbar-width: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.background_info {
+    top: 30rem;
+    text-align: left;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 14%;
+    font-size: 240px;
+    font-weight: 100;
+    color: rgb(128, 128, 128, 0.03);
+}
+
 .card-wrapper::-webkit-scrollbar {
     display: none;
 }
@@ -33,7 +45,17 @@
     text-align: left;
     overflow: hidden;
     padding-right: 2rem;
+    z-index: 5;
     text-overflow: ellipsis;
+}
+
+.card_infoo h2 {
+    font-size: 24px;
+    font-weight: 100;
+}
+.card_infoo p {
+    font-size: 16px;
+    font-weight: 100;
 }
 .card {
     display: flex;

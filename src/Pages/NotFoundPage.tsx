@@ -1,10 +1,9 @@
 import PageNotFoundDark from './../Assets/PageNotFoundDark.svg';
-import GreenButton from '../Components/Others/Button/AuthButton';
+import CustButton from '../Components/Others/Button/CustButton';
 
-const NotFound = () => {
+const NotFoundPage = () => {
     const styles = {
         div: {
-            // background: "#FFFDD0",
             background: 'rgb(21, 26, 30)',
             display: 'flex',
             borderRadius: '0.5rem',
@@ -16,20 +15,6 @@ const NotFound = () => {
         img: {
             position: 'absolute',
         },
-        // sec: {
-        //     position: 'absolute',
-        //     display: 'flex',
-        //     alignItems: 'center',
-        //     justifyContent: 'center',
-        //     flexDirection: 'column',
-        //     width: '90%',
-        //     height: '50%',
-        //     top: '2rem',
-        //     fontWeight: '100',
-        //     color: 'lavender',
-        //     backdropFilter: 'blur(2px)',
-        //     zIndex: '1000',
-        // },
     };
     return (
         <div style={styles.div}>
@@ -84,10 +69,10 @@ const NotFound = () => {
                     have been removed, renamed, or did not exist in the first
                     place.
                 </h2>
-                <GreenButton label="Back" />
+                <CustButton label="Back" col="#00BF87" />
             </section>
         </div>
     );
 };
 
-export default NotFound;
+export default NotFoundPage;
