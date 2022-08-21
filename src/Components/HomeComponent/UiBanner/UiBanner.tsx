@@ -98,7 +98,6 @@ const UiBanner = (props: any) => {
                 transition={{ staggerChildren: 0.5 }}
             >
                 <span className="card_infoo">
-                    <motion.h1 variants={textAnimate}>{h1}</motion.h1>
                     <motion.h2 variants={textAnimate}>{h2}</motion.h2>
                     <motion.p variants={textAnimate}>{p}</motion.p>
                 </span>
@@ -128,6 +127,7 @@ const UiBanner = (props: any) => {
     };
     return (
         <div className="uiBanner">
+            <span className="background_info">UI / UX</span>
             <div className="card-wrapper">
                 {blogList.map((item) => (
                     <Card

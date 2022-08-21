@@ -1,4 +1,4 @@
-.authButton button {
+.custButton button {
     width: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -15,12 +15,11 @@
     gap: 8px;
     -webkit-transition: border-radius 0.15s;
     transition: border-radius 0.15s;
-    background: #e2ff00;
     cursor: pointer;
     transition: 0.5s all ease;
 }
 
-.authButton button:hover {
+.custButton button:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
     border-radius: 40px;

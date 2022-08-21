@@ -1,15 +1,20 @@
 import { motion } from 'framer-motion';
-import './AuthButton.css';
+import './CustButton.css';
 
-const AuthButton = (props: any) => {
+const CustButton = (props: any) => {
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="authButton"
+            className="custButton"
         >
             <button
-                style={{ marginTop: '20px' }}
+                style={{
+                    marginTop: '20px',
+                    width: props.width,
+                    background: props.backCol,
+                    color: props.textCol,
+                }}
                 type="submit"
                 onClick={props.fn}
             >
@@ -19,4 +24,4 @@ const AuthButton = (props: any) => {
     );
 };
 
-export default AuthButton;
+export default CustButton;

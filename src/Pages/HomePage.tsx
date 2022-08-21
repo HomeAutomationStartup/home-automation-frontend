@@ -1,7 +1,7 @@
-import Advertisment from './../Components/HomeComponent/Advertisment/Index';
-import AuthContainer from './../Components/HomeComponent/AuthContainer/AuthContainer';
+import Advertisment from '../Components/HomeComponent/Advertisment/Index';
+import AuthContainer from '../Components/HomeComponent/AuthContainer/AuthContainer';
 
-const Home = () => {
+const HomePage = () => {
     const styles = {
         div: {
             height: '100%',
@@ -27,4 +27,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomePage;

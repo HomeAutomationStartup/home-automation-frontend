@@ -30,3 +30,4 @@ export default function useWindowDimensions() {
 
     return windowDimensions;
 }
+//  const { width } = useWindowDimensions();

@@ -1,4 +1,4 @@
-const MobileResWarning = () => {
+const MobileResWarningPage = () => {
     const styles = {
         div: {
             width: '100%',
@@ -12,4 +12,4 @@ const MobileResWarning = () => {
     return <div style={styles.div}>Download Mobile version</div>;
 };
 
-export default MobileResWarning;
+export default MobileResWarningPage;

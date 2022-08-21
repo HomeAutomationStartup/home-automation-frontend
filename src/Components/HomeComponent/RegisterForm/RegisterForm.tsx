@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
-import GreenButton from '../../Others/Button/AuthButton';
+import CustButton from '../../Others/Button/CustButton';
 import './RegisterForm.css';
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Url } from './../../../Data/Constant';
+import { RegisterUser } from '../../../Services/RegisterUser';
+import { ToastContainer } from 'react-toastify';
 
 const RegisterForm = () => {
     const styles = {
@@ -26,8 +26,8 @@ const RegisterForm = () => {
     });
 
     const onRegSubmit = (data: any) => {
+        RegisterUser(Url.user_registration_url, data);
         reset();
-        toast.success('Register Successful');
     };
 
     return (
@@ -136,19 +136,24 @@ const RegisterForm = () => {
                     {!regErrors.email &&
                         !regErrors.password &&
                         !regErrors.name &&
-                        !regErrors.userName && <GreenButton label="submit" />}
+                        !regErrors.userName && (
+                            <CustButton
+                                label="submit"
+                                textCol="black"
+                                backCol="#e2ff00"
+                            />
+                        )}
+
+                    {!regErrors.email &&
+                        !regErrors.password &&
+                        !regErrors.name &&
+                        !regErrors.userName && (
+                            <section className="appPolicies">
+                                <span>Privacy Policy &amp; Cookie Policy</span>
+                            </section>
+                        )}
                 </form>
-
-                {/* {!regErrors.email &&
-          !regErrors.password &&
-          !regErrors.name &&
-          !regErrors.userName && (
-            <section className="appPolicies">
-              <span>Terms &amp; Conditions</span>
             </section>
-          )} */}
-            </section>
-
             <ToastContainer />
         </div>
     );

@@ -1,10 +1,12 @@
 import { useForm } from 'react-hook-form';
-import GreenButton from '../../Others/Button/AuthButton';
+import { useNavigate } from 'react-router-dom';
+import CustButton from '../../Others/Button/CustButton';
 import './LogInForm.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import { LoginUser } from '../../../Services/LoginUser';
 
 const LogInForm = () => {
+    const navigate = useNavigate();
     const styles = {
         p: {
             color: 'red',
@@ -25,7 +27,7 @@ const LogInForm = () => {
 
     const onLogSubmit = (data: any) => {
         reset();
-        toast.success('Login Successful');
+        LoginUser(data, navigate);
     };
 
     return (
@@ -87,7 +89,11 @@ const LogInForm = () => {
                         </p>
                     )}
                     {!logErrors.password && !logErrors.userName && (
-                        <GreenButton label="Login" />
+                        <CustButton
+                            label="Login"
+                            textCol="black"
+                            backCol="#e2ff00"
+                        />
                     )}
                 </form>
             </section>

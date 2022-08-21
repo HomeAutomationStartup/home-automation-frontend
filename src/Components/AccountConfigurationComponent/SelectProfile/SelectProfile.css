@@ -1,0 +1,36 @@
+.selectProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgb(34, 38, 42);
+    border-radius: inherit;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.selectProfile ul {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 80px;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.selectProfile ul::-webkit-scrollbar {
+    display: none;
+}
+.selectProfile ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 0.5rem;
+}

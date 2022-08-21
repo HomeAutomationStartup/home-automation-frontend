@@ -4,7 +4,6 @@ import './UiLook.css';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import UiBanner from '../../UiBanner/UiBanner';
-
 const UiLook = () => {
     const [mode, setMode] = useState<boolean>(false);
     return (
@@ -63,7 +62,7 @@ const UiLook = () => {
                     <span className="uiLook_content_mode_child_2">
                         {!mode && (
                             <span>
-                                <p>Dark Mode</p>
+                                <h1>Dark Mode</h1>
                                 <p>
                                     Inspired by the very original Open Bridge
                                     designed back in 2016, this theme balances
@@ -73,7 +72,7 @@ const UiLook = () => {
                         )}
                         {mode && (
                             <span>
-                                <p>Sun Mode </p>
+                                <h1>Sun Mode </h1>
                                 <p>
                                     This mode was created to give you the best
                                     possible contrast in bright environments and
