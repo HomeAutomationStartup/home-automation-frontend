@@ -32,14 +32,14 @@ const RegisterForm = () => {
 
     return (
         <div className="registerForm">
-            <section className="form-container">
+            <section className="registerForm_form_container">
                 <form
                     onSubmit={handleRegSubmit(onRegSubmit)}
-                    className="regForm"
+                    className="registerForm_regForm"
                 >
                     <input
                         type="text"
-                        className="form_field"
+                        className="registerForm_form_field"
                         placeholder="User Name"
                         style={{
                             marginTop: '1rem',
@@ -65,7 +65,7 @@ const RegisterForm = () => {
 
                     <input
                         type="text"
-                        className="form_field"
+                        className="registerForm_form_field"
                         placeholder="Name"
                         style={{
                             marginTop: '1rem',
@@ -91,7 +91,7 @@ const RegisterForm = () => {
 
                     <input
                         type="password"
-                        className="form_field"
+                        className="registerForm_form_field"
                         placeholder="Password"
                         style={{
                             marginTop: '1rem',
@@ -117,7 +117,7 @@ const RegisterForm = () => {
 
                     <input
                         type="email"
-                        className="form_field"
+                        className="registerForm_form_field"
                         placeholder="Email"
                         style={{
                             marginTop: '1rem',
@@ -148,7 +148,7 @@ const RegisterForm = () => {
                         !regErrors.password &&
                         !regErrors.name &&
                         !regErrors.userName && (
-                            <section className="appPolicies">
+                            <section className="registerForm_appPolicies">
                                 <span>Privacy Policy &amp; Cookie Policy</span>
                             </section>
                         )}

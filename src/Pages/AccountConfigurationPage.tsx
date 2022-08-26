@@ -13,7 +13,6 @@ const AccountConfigurationPage = () => {
             width: '100%',
             height: '100%',
             borderRadius: '0.5rem',
-            background: 'rgb(7,11,13)',
         },
         outerSection: {
             height: '85%',

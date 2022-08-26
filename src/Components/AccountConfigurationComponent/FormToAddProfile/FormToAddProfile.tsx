@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
-import { RoomNames } from '../../../Data/Constant';
+import { AccountConfigurationRoomNames } from '../../../Data/Constant';
 import { PostDataWithToken } from '../../../Services/Interceptor';
 import { Url } from './../../../Data/Constant';
 import { ToastContainer } from 'react-toastify';
-import { HeaderMessage } from './../../../Data/Constant';
+import { AccountConfiguration } from './../../../Data/Constant';
 import CustButton from '../../Others/Button/CustButton';
 import './FormToAddProfile.css';
 import { useNavigate } from 'react-router-dom';
@@ -48,34 +48,29 @@ const FormToAddProfile = () => {
     var addRooms = (el: any) => {
         setRoom(el);
     };
+    useEffect(() => {
+        // console.count();
+    });
     return (
         <div className="formToAddProfile">
-            <section className="form-container">
+            <section className="formToAddProfile_form_container">
                 <form
                     onSubmit={handleProSubmit(onProSubmit)}
-                    className="proForm"
+                    className="formToAddProfile_proForm"
                 >
                     {!(room.length > 6) &&
                         !proErrors.profileName &&
                         !proErrors.cityName &&
                         !proErrors.countryName && (
-                            <span className="proForm_header">
-                                <h1>
-                                    {
-                                        HeaderMessage.accountConfiguration_form_header
-                                    }
-                                </h1>
-                                <p>
-                                    {
-                                        HeaderMessage.accountConfiguration_form_subHeader
-                                    }
-                                </p>
+                            <span className="formToAddProfile_proForm_header">
+                                <h1>{AccountConfiguration.form_header}</h1>
+                                <p>{AccountConfiguration.form_subHeader}</p>
                             </span>
                         )}
 
                     <input
                         type="text"
-                        className="form_field"
+                        className="formToAddProfile_form_field"
                         placeholder="Profile Name"
                         style={{
                             marginTop: '1rem',
@@ -101,7 +96,7 @@ const FormToAddProfile = () => {
 
                     <input
                         type="text"
-                        className="form_field"
+                        className="formToAddProfile_form_field"
                         placeholder="City Name"
                         style={{
                             marginTop: '1rem',
@@ -127,7 +122,7 @@ const FormToAddProfile = () => {
 
                     <input
                         type="text"
-                        className="form_field"
+                        className="formToAddProfile_form_field"
                         placeholder="Country Name"
                         style={{
                             marginTop: '1rem',
@@ -151,21 +146,24 @@ const FormToAddProfile = () => {
                         </p>
                     )}
                     {!(room.length > 6) ? (
-                        <p className="roomInformation">
-                            {
-                                HeaderMessage.accountConfiguration_room_form_header
-                            }
+                        <p className="formToAddProfile_roomInformation">
+                            {AccountConfiguration.select_room_header}
                         </p>
                     ) : (
-                        <p className="roomWarning">Max 6 rooms can be Added</p>
+                        <p
+                            style={styles.p}
+                            className="formToAddProfile_roomWarning"
+                        >
+                            {AccountConfiguration.select_room_error}
+                        </p>
                     )}
 
                     <Select
-                        className="select"
+                        className="formToAddProfile_select"
                         closeMenuOnSelect={false}
                         components={animatedComponents}
                         isMulti
-                        options={RoomNames}
+                        options={AccountConfigurationRoomNames}
                         onChange={addRooms}
                     />
 

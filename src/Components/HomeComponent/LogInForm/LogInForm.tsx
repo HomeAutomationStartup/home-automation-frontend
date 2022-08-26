@@ -4,6 +4,7 @@ import CustButton from '../../Others/Button/CustButton';
 import './LogInForm.css';
 import { ToastContainer } from 'react-toastify';
 import { LoginUser } from '../../../Services/LoginUser';
+import { useEffect } from 'react';
 
 const LogInForm = () => {
     const navigate = useNavigate();
@@ -29,7 +30,9 @@ const LogInForm = () => {
         reset();
         LoginUser(data, navigate);
     };
-
+    useEffect(() => {
+        //console.count();
+    });
     return (
         <div className="loginForm">
             <section className="form-container">

@@ -1,9 +1,11 @@
 import { MdLightMode, MdOutlineDarkMode } from 'react-icons/md';
 import { IconContext } from 'react-icons';
 import './UiLook.css';
+import Shape from './../../../../Assets/Shape.svg';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import UiBanner from '../../UiBanner/UiBanner';
+import ScrollDown from './../../../../Assets/ScrollDown.svg';
 const UiLook = () => {
     const [mode, setMode] = useState<boolean>(false);
     return (
@@ -13,7 +15,7 @@ const UiLook = () => {
                     <p>APP UI DESIGN</p>
                     <h1>
                         We created{' '}
-                        <span style={{ color: '#C70CC4' }}>
+                        <span style={{ color: '#00B5FF' }}>
                             modes for every situation.
                         </span>
                         <br />
@@ -83,6 +85,18 @@ const UiLook = () => {
                     </span>
                 </section>
                 <section className="uiLook_content_banner">
+                    <span className="uiLook_content_banner_scroll">
+                        <img
+                            src={ScrollDown}
+                            width="50"
+                            height="110"
+                            alt="scroll_icon"
+                        />
+                    </span>
+
+                    <span className="uiLook_content_banner_background">
+                        <img src={Shape} alt="banner_background" />
+                    </span>
                     <UiBanner
                         col={mode ? 'rgb(34, 38, 42)' : 'rgb(21, 26, 30)'}
                     />

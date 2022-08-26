@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getAccessToken, logOut } from './../Utils/AuthHelperFunction';
+import { getAccessToken } from './../Utils/AuthHelperFunction';
 import { RootUrl } from './../Data/Constant';
 import { toast } from 'react-toastify';
 import 'react-toastify/ReactToastify.min.css';
@@ -17,10 +17,11 @@ export const PostDataWithToken = async ({ ...options }) => {
     } catch (error) {
         let errorDetails = error.response.data.message;
 
-        if (errorDetails.includes('expired')) {
-            toast.error(errorDetails);
-            logOut(options.navigate);
-        } else if (typeof errorDetails === 'object' && errorDetails !== null) {
+        // if (errorDetails.includes('expired')) {
+        //     toast.error(errorDetails);
+        //     logOut(options.navigate);
+        // }else
+        if (typeof errorDetails === 'object' && errorDetails !== null) {
             Object.keys(errorDetails).forEach(function eachKey(key) {
                 toast.error(errorDetails[key]);
             });

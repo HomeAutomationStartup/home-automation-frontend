@@ -3,10 +3,10 @@ import { FcInfo } from 'react-icons/fc';
 import { IconContext } from 'react-icons';
 import { motion } from 'framer-motion';
 
-const ProfileBox = () => {
+const ProfileBox = (props: any) => {
     return (
         <div className="profileBox">
-            <section className="profileBox_row_1">hel</section>
+            <section className="profileBox_row_1">{props.profileName}</section>
             <section className="profileBox_row_2">
                 <motion.div
                     whileHover={{ scale: 1.1 }}
