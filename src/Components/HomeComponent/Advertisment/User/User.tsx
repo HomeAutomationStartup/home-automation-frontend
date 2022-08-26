@@ -4,7 +4,7 @@ import './User.css';
 const User = () => {
     const styles = {
         span: {
-            color: '#C70CC4',
+            color: '#00B5FF',
         },
     };
     return (

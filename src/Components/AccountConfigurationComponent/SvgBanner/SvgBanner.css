@@ -16,9 +16,17 @@
     height: 30%;
 }
 .svgBanner_header ul {
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
+    border-radius: 0.6rem;
+    background: rgb(7, 11, 13, 0.5);
     list-style-type: none;
     padding-left: 0px;
+    color: lavender;
 }
 .svgBanner_header ul li {
     display: inline-block;

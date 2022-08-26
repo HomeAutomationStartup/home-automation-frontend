@@ -7,6 +7,7 @@ export const getAccessToken = () => {
     const accessToken = localStorage.getItem('token');
     return accessToken;
 };
+
 export const getAppAdminUser = () => {
     const adminUserName = localStorage.getItem('appUser');
     return adminUserName;

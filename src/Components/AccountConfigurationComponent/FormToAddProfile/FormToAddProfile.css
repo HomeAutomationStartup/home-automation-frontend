@@ -4,26 +4,15 @@
     background: rgb(34, 38, 42);
     border-radius: inherit;
 }
-.form-container {
+.formToAddProfile_form_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
 
-.proForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: scroll;
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    border-radius: '0.5rem';
-}
-
-.proForm::-webkit-scrollbar {
-    display: none;
-}
-.proForm_header {
+.formToAddProfile_proForm_header {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -33,28 +22,39 @@
     color: lavender;
     padding-left: 5rem;
 }
-.proForm_header h1 {
+.formToAddProfile_proForm_header h1 {
     color: aqua;
     font-size: 32px;
     margin: 0;
 }
-.proForm_header p {
+.formToAddProfile_proForm_header p {
     color: lavender;
     font-size: 16px;
 }
-.proForm {
-    width: 90%;
-    height: 90%;
+.formToAddProfile_proForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 94%;
+    height: 92%;
     position: relative;
     flex-direction: column;
     background: rgb(21, 26, 30);
-    border-radius: inherit;
+    border-radius: 0.5rem;
     transition: 0.5s;
+}
+
+.formToAddProfile_proForm::-webkit-scrollbar {
+    display: none;
 }
 
 /*******************************************************/
 
-.form_field {
+.formToAddProfile_form_field {
     width: 80%;
     border: none;
     padding: 10px;
@@ -62,8 +62,9 @@
     border: 1px solid rgb(0, 0, 0, 0.2);
     font-size: 1rem;
     color: #656880;
+    background: rgb(34, 38, 42);
 }
-.form_field:focus {
+.formToAddProfile_form_field:focus {
     outline: none !important;
     border: 1px solid #ff4500;
     transition: 0.5s all ease;
@@ -71,15 +72,15 @@
 }
 
 /* *********************************************************** */
-.select {
+.formToAddProfile_select {
     width: 80%;
     margin-bottom: 1rem;
 }
-.roomWarning {
+.formToAddProfile_roomWarning {
     color: red;
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.roomInformation {
+.formToAddProfile_roomInformation {
     color: lavender;
 }

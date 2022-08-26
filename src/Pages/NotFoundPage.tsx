@@ -69,7 +69,7 @@ const NotFoundPage = () => {
                     have been removed, renamed, or did not exist in the first
                     place.
                 </h2>
-                <CustButton label="Back" col="#00BF87" />
+                <CustButton label="Back" backCol="#00BF87" textCol="black" />
             </section>
         </div>
     );
