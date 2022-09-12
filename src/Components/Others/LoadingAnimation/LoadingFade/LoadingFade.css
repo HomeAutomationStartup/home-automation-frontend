@@ -14,10 +14,10 @@
 }
 @keyframes skeleton-loading {
     0% {
-        background-color: rgb(172, 185, 185);
+        background-color: rgb(7, 11, 13);
     }
     100% {
-        background-color: rgb(241, 243, 243);
+        background-color: rgb(122, 122, 122);
     }
 }
 

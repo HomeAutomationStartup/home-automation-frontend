@@ -1,28 +1,30 @@
+.authContainer_btn,
+.authContainer_form,
 .authContainer {
     display: flex;
     align-items: center;
+    border-radius: inherit;
+    width: 100%;
+}
+
+.authContainer {
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
-    width: 100%;
-    border-radius: inherit;
     padding: 0.5rem;
-    background: rgb(34, 38, 42);
-}
-.authContainer_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 19.3%;
     background: rgb(21, 26, 30);
-    border-radius: inherit;
 }
+
+.authContainer_btn,
 .authContainer_form {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
+}
+
+.authContainer_btn {
+    height: 19.3%;
+    background: rgb(7, 11, 13);
+}
+
+.authContainer_form {
     height: 79.3%;
-    border-radius: inherit;
 }

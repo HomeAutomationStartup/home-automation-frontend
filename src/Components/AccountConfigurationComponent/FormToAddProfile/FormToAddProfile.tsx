@@ -2,18 +2,21 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
-import { AccountConfigurationRoomNames } from '../../../Data/Constant';
-import { PostDataWithToken } from '../../../Services/Interceptor';
+import {
+    AccountConfigurationPicsType,
+    AccountConfigurationRoomNames,
+} from '../../../Data/Constant';
 import { Url } from './../../../Data/Constant';
 import { ToastContainer } from 'react-toastify';
 import { AccountConfiguration } from './../../../Data/Constant';
 import CustButton from '../../Others/Button/CustButton';
 import './FormToAddProfile.css';
-import { useNavigate } from 'react-router-dom';
+import { PostDataWithoutToken } from '../../../Services/PostDataWithoutToken';
+import { getAppAdminUser } from '../../../Utils/AuthHelperFunction';
 const animatedComponents = makeAnimated();
 
 const FormToAddProfile = () => {
-    const navigate = useNavigate();
+    let ADMIN = getAppAdminUser();
     const styles = {
         p: {
             color: 'red',
@@ -33,20 +36,19 @@ const FormToAddProfile = () => {
     });
 
     const [room, setRoom] = useState([]);
+    const [pic, setPic] = useState();
 
     const onProSubmit = (data: any) => {
-        Object.assign(data, { room: room });
-        PostDataWithToken({
-            url: Url.user_create_profile,
-            method: 'post',
-            data: data,
-            navigate,
-        });
+        Object.assign(data, { room: room }, { picType: pic });
+        PostDataWithoutToken(Url.profile_creation_url + ADMIN, data);
         reset();
     };
 
     var addRooms = (el: any) => {
         setRoom(el);
+    };
+    var addPics = (el: any) => {
+        setPic(el.picType);
     };
     useEffect(() => {
         // console.count();
@@ -165,6 +167,13 @@ const FormToAddProfile = () => {
                         isMulti
                         options={AccountConfigurationRoomNames}
                         onChange={addRooms}
+                    />
+                    <Select
+                        className="formToAddProfile_select"
+                        closeMenuOnSelect={true}
+                        components={animatedComponents}
+                        options={AccountConfigurationPicsType}
+                        onChange={addPics}
                     />
 
                     {!(room.length < 1) &&

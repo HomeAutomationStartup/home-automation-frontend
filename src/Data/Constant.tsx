@@ -1,17 +1,16 @@
-import { getAppAdminUser } from '../Utils/AuthHelperFunction';
 import Shot from './../Assets/Shot.png';
 
-const appUser = getAppAdminUser();
 export const RootUrl = {
     authMS: 'http://localhost:8085',
+    gateway: 'http://localhost:8086',
 };
 export const Url = {
     user_registration_url: RootUrl.authMS + '/api/v1/users/create',
     user_login_url: RootUrl.authMS + '/api/v1/users/authenticate',
-    user_create_profile:
-        RootUrl.authMS + '/api/v1/profile/create?username=' + appUser,
-    user_get_profile:
-        'http://localhost:8081/api/v1/profile?ownername=' + appUser,
+    profile_creation_url:
+        RootUrl.gateway + '/pra/api/v1/profiles/create?admin=',
+    profiles_fetch_url: RootUrl.gateway + '/pra/api/v1/profiles/admin?admin=',
+    profile_fetch_url: RootUrl.gateway + '/pra/api/v1/profiles/id?id=',
 };
 export const RoutePath = {
     home: '/',
@@ -19,7 +18,9 @@ export const RoutePath = {
     mainApplication: '/app',
     room: 'room/:type',
     premium: 'app/premium',
+    setting: 'app/setting',
     dashboard: 'dashboard',
+    connection: 'app/connection',
 };
 
 export const AccountConfiguration = {
@@ -34,21 +35,27 @@ export const AccountConfiguration = {
 };
 
 export const AccountConfigurationRoomNames = [
-    { type: 'Bathroom', value: 'Bathroom', label: 'Bathroom' },
-    { type: 'Bedroom', value: 'Bedroom', label: 'Bedroom' },
-    { type: 'Dining Room', value: 'DiningRoom', label: 'Dining Room' },
-    { type: 'Drawing Room', value: 'DrawingRoom', label: 'Drawing Room' },
-    { type: 'Hall', value: 'Hall', label: 'Hall' },
-    { type: 'Kitchen', value: 'Kitchen', label: 'Kitchen' },
-    { type: 'Living Room', value: 'LivingRoom', label: 'Living Room' },
+    { roomType: 'Bathroom', value: 'Bathroom', label: 'Bathroom' },
+    { roomType: 'Bedroom', value: 'Bedroom', label: 'Bedroom' },
+    { roomType: 'Dining Room', value: 'DiningRoom', label: 'Dining Room' },
+    { roomType: 'Drawing Room', value: 'DrawingRoom', label: 'Drawing Room' },
+    { roomType: 'Hall', value: 'Hall', label: 'Hall' },
+    { roomType: 'Kitchen', value: 'Kitchen', label: 'Kitchen' },
+    { roomType: 'Living Room', value: 'LivingRoom', label: 'Living Room' },
     {
-        type: 'Master Bedroom',
+        roomType: 'Master Bedroom',
         value: 'MasterBedroom',
         label: 'Master Bedroom',
     },
-    { type: 'Room', value: 'Room', label: 'Room' },
-    { type: 'Store Room', value: 'StoreRoom', label: 'Store Room' },
-    { type: 'Study Room', value: 'StudyRoom', label: 'Study Room' },
+    { roomType: 'Room', value: 'Room', label: 'Room' },
+    { roomType: 'Store Room', value: 'StoreRoom', label: 'Store Room' },
+    { roomType: 'Study Room', value: 'StudyRoom', label: 'Study Room' },
+];
+export const AccountConfigurationPicsType = [
+    { picType: 'Woman', value: 'Woman', label: 'Woman' },
+    { picType: 'Man', value: 'Man', label: 'Man' },
+    { picType: 'Girl', value: 'Girl', label: 'Girl' },
+    { picType: 'Boy', value: 'Boy', label: 'Boy' },
 ];
 export const UserReview = [
     {
@@ -57,7 +64,7 @@ export const UserReview = [
             'Variants are pre-defined visual states that a component can be in. By giving a component.',
         title: 'Shubham kumar singh',
         description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English..The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
         dateAndTime: '11:20AM - 29 Nov 2022',
         rating: 4,
     },
@@ -67,7 +74,7 @@ export const UserReview = [
             'Variants are pre-defined visual states that a component can be in. By giving a component.',
         title: 'Shubham kumar singh',
         description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English..The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
         dateAndTime: '11:20AM - 29 Nov 2022',
         rating: 3.8,
     },
@@ -231,3 +238,25 @@ export const BlogList = [
         p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
     },
 ];
+
+export const SpringSuspense = {
+    hidden: {
+        y: '-100vh',
+        opacity: 0,
+        transform: 'scale(0) rotateX(-360deg)',
+    },
+    visible: {
+        y: '0vh',
+        opacity: 1,
+        transition: {
+            duration: 0.2,
+            type: 'spring',
+            damping: 15,
+            stiffness: 500,
+        },
+    },
+    exit: {
+        y: '-100vh',
+        opacity: 0,
+    },
+};

@@ -1,6 +1,6 @@
 .registerForm,
 .registerForm_regForm,
-.registerForm_form-container {
+.registerForm_form_container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,6 +9,9 @@
 .registerForm {
     height: 100%;
     width: 100%;
+    border-radius: inherit;
+    background: rgb(21, 26, 30);
+    background: rgb(7, 11, 13);
 }
 
 .registerForm_regForm {
@@ -16,12 +19,12 @@
     height: 100%;
     position: relative;
     flex-direction: column;
-    background: rgb(21, 26, 30);
+    background: rgb(7, 11, 13);
     transition: 0.5s;
 }
 .registerForm_form_container {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     overflow-y: scroll;
     position: relative;
     background: none;
@@ -37,13 +40,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 70%;
     height: 10%;
     position: relative;
     color: lavender;
     border-radius: 0.6rem;
     margin-top: 5rem;
+    background: rgb(7, 52, 53, 0.5);
 }
+
 .registerForm_form_field {
     width: 80%;
     border: none;
@@ -59,5 +64,4 @@
     outline: none !important;
     border: 1px solid #ff4500;
     transition: 0.5s all ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
 }

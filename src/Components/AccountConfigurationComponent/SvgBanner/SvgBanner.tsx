@@ -19,7 +19,7 @@ const SvgBanner = (props: any) => {
                             label={
                                 props.status ? 'Select profile' : 'Add profile'
                             }
-                            backCol="#e2ff00"
+                            backCol="#38ff13"
                             textCol="black"
                         />
                     </li>
@@ -31,7 +31,9 @@ const SvgBanner = (props: any) => {
                 </ul>
             </span>
             <span className="svgBanner_banner">
-                <img src={UseProfile} alt="profile_banner_pics" />
+                <section className="svgBanner_banner_content">
+                    <img src={UseProfile} alt="profile_banner_pics" />
+                </section>
             </span>
         </div>
     );

@@ -47,26 +47,18 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ---
 
-color: '#C70CC4',
+## Fab color: `#C70CC4`
 
-framer-motion
-react-hook-form
-react-toastify
-react-icons
-npm i react-simple-star-rating
-react-router-dom
-react-query
-react-select
+## Dependency
 
-fontSize: "calc(0.5vw + 0.5vh + 1vmin)"
+`framer-motion`
+`react-hook-form`
+`react-toastify`
+`react-icons`
+`react-simple-star-rating`
+`react-router-dom`
+`react-query`
+`react-select`
+`fuse.js`
 
-interface User {
-id: number;
-subtitle: string;
-title: string;
-}
-
-<!-- const Profile = React.lazy(() => import('./../../Profile/Profile')); -->
-  <!-- <Suspense fallback={<LoadingFade />}></Suspense> -->
-
-© 2020-present Joshua Comeau. All Rights Reserved.
+## Fab fontSize: `calc(0.5vw + 0.5vh + 1vmin)`
