@@ -11,12 +11,18 @@
     height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
 }
-.userTestimonial_list_box h1 {
+.userTestimonial_list_box_title {
     font-weight: 100;
     font-family: 'Shadows Into Light', cursive;
-    font-size: 1.8em;
+    font-size: 24px;
+}
+.userTestimonial_list_box_expand:hover {
+    color: #000000;
 }
 .userTestimonial_list_box:nth-child(1),
 .userTestimonial_list_box:nth-child(5),
@@ -25,12 +31,12 @@
 .userTestimonial_list_box:nth-child(3),
 .userTestimonial_list_box:nth-child(7),
 .userTestimonial_list_box:nth-child(8),
-.userTestimonial_list_box:nth-child(10){
+.userTestimonial_list_box:nth-child(10) {
     grid-column: span 1;
 }
 .userTestimonial_list_box:nth-child(2),
 .userTestimonial_list_box:nth-child(4),
 .userTestimonial_list_box:nth-child(9),
-.userTestimonial_list_box:nth-child(11){
+.userTestimonial_list_box:nth-child(11) {
     grid-column: span 2;
 }

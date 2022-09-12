@@ -1,11 +1,12 @@
 import { MdLightMode, MdOutlineDarkMode } from 'react-icons/md';
 import { IconContext } from 'react-icons';
-import './UiLook.css';
 import Shape from './../../../../Assets/Shape.svg';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import UiBanner from '../../UiBanner/UiBanner';
 import ScrollDown from './../../../../Assets/ScrollDown.svg';
+import './UiLook.css';
+
 const UiLook = () => {
     const [mode, setMode] = useState<boolean>(false);
     return (

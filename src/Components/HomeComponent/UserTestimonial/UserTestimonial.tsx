@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import './UserTestimonial.css';
 import SubUserTestimonialShadow from './SubUserTestimonialShadow/SubUserTestimonialShadow';
 import SubUserTestimonialBox from './SubUserTestimonialBox/SubUserTestimonialBox';
 import SubUserTestimonialBoxAfter from './SubUserTestimonialBoxAfter/SubUserTestimonialBoxAfter';
 import { UserReview as Items } from '../../../Data/Constant';
+import './UserTestimonial.css';
 
 const UserTestimonial = () => {
     const [selectedId, setSelectedId] = useState<any>(null);
@@ -28,6 +28,7 @@ const UserTestimonial = () => {
                             key={item.id}
                             title={item.title}
                             subtitle={item.subtitle}
+                            description={item.description}
                             setSelectedId={setSelectedId}
                         />
                     ))}

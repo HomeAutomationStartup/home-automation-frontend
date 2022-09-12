@@ -2,6 +2,8 @@
     height: 100%;
     width: 100%;
     background: rgb(34, 38, 42);
+    background: rgb(7, 11, 13);
+    background: rgb(21, 26, 30);
     border-radius: inherit;
 }
 .formToAddProfile_form_container {
@@ -40,10 +42,11 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     width: 94%;
-    height: 92%;
+    height: 93%;
     position: relative;
     flex-direction: column;
     background: rgb(21, 26, 30);
+    background: rgb(7, 11, 13);
     border-radius: 0.5rem;
     transition: 0.5s;
 }

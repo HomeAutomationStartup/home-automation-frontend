@@ -1,22 +1,19 @@
 import axios from 'axios';
-import { getAccessToken } from './../Utils/AuthHelperFunction';
-import { RootUrl } from './../Data/Constant';
 import { toast } from 'react-toastify';
 import 'react-toastify/ReactToastify.min.css';
 
-const client = axios.create({
-    baseURL: RootUrl.authMS,
-});
-
-export const PostDataWithToken = async ({ ...options }) => {
-    const accessToken = getAccessToken();
-    client.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+export const PostDataWithoutToken = async (url: any, data: any) => {
+    const options = {
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+    };
     try {
-        const response = await client(options);
+        const response = await axios.post(url, data, options);
         toast.success(response.data.message);
     } catch (error) {
-        let errorDetails = error.response.data.message;
-
+        let errorDetails = (error as any)?.response.data.message;
         if (typeof errorDetails === 'object' && errorDetails !== null) {
             Object.keys(errorDetails).forEach(function eachKey(key) {
                 toast.error(errorDetails[key]);

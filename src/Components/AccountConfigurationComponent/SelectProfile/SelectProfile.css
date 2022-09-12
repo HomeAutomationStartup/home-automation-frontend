@@ -1,11 +1,12 @@
 .selectProfile {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
-    background: rgb(34, 38, 42);
+    background: rgb(21, 26, 30);
     border-radius: inherit;
+    flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 2rem;
@@ -17,7 +18,7 @@
     height: 100%;
     padding: 1rem 1rem 80px;
     grid-gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     list-style: none;
     overflow: scroll;
     overflow-x: hidden;
@@ -33,4 +34,22 @@
     justify-content: center;
     height: 200px;
     border-radius: 0.5rem;
+}
+.selectProfile_search {
+    width: 80%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid#cae7ea;
+}
+
+.selectProfile_search input {
+    border: none;
+    outline: 0;
+    width: 70%;
+    min-height: 2.8rem;
+    background: #cae7ea;
+    padding-left: 1rem;
+    border-radius: 10px;
 }

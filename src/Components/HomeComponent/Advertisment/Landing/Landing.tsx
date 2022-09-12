@@ -1,4 +1,3 @@
-import './Landing.css';
 import RaspberryPi from './../../../../Assets/RaspberryPi.svg';
 import NodeMCU from './../../../../Assets/NodeMCU.svg';
 import Arduino from './../../../../Assets/Arduino.svg';
@@ -9,23 +8,23 @@ import Rpa from './../../../../Assets/Rpa.svg';
 import Automation from './../../../../Assets/Automation.svg';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import './Landing.css';
 
 const Landing = () => {
     const [count, setCount] = useState(0);
-    const [Imgg, setImgg] = useState(Automation);
+    const [Img, setImg] = useState(Automation);
     const changeImg = (pos: any) => {
         setCount(pos);
     };
     useEffect(() => {
-        console.log(count);
         if (count === 0) {
-            setImgg(Automation);
+            setImg(Automation);
         }
         if (count === 1) {
-            setImgg(Visual);
+            setImg(Visual);
         }
         if (count === 2) {
-            setImgg(Rpa);
+            setImg(Rpa);
         }
     }, [count]);
     return (
@@ -44,7 +43,7 @@ const Landing = () => {
                             }}
                         >
                             <img
-                                src={Imgg}
+                                src={Img}
                                 width="369"
                                 height="360"
                                 alt="landing_img"

@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import CustButton from '../../Others/Button/CustButton';
-import './LogInForm.css';
 import { ToastContainer } from 'react-toastify';
 import { LoginUser } from '../../../Services/LoginUser';
 import { useEffect } from 'react';
+import './LogInForm.css';
 
 const LogInForm = () => {
     const navigate = useNavigate();
@@ -35,14 +35,14 @@ const LogInForm = () => {
     });
     return (
         <div className="loginForm">
-            <section className="form-container">
+            <section className="loginForm_form_container">
                 <form
                     onSubmit={handleLogSubmit(onLogSubmit)}
-                    className="logForm"
+                    className="loginForm_logForm"
                 >
                     <input
                         type="text"
-                        className="form_field"
+                        className="loginForm_form_field"
                         placeholder="User Name"
                         style={{
                             marginTop: '1rem',
@@ -68,7 +68,7 @@ const LogInForm = () => {
 
                     <input
                         type="password"
-                        className="form_field"
+                        className="loginForm_form_field"
                         placeholder="Password"
                         style={{
                             marginTop: '1rem',
@@ -96,6 +96,7 @@ const LogInForm = () => {
                             label="Login"
                             textCol="black"
                             backCol="#e2ff00"
+                            width="150px"
                         />
                     )}
                 </form>

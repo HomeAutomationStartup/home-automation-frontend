@@ -14,8 +14,14 @@ const MainApplicationPage = React.lazy(
     () => import('../../../Pages/MainApplicationPage'),
 );
 const DashBoardPage = React.lazy(() => import('../../../Pages/DashBoardPage'));
+const MainApplicationSettingPage = React.lazy(
+    () => import('../../../Pages/MainApplicationSettingPage'),
+);
 const RoomPage = React.lazy(() => import('../../../Pages/RoomPage'));
 const PremiumPage = React.lazy(() => import('../../../Pages/PremiumPage'));
+const ConnectionPage = React.lazy(
+    () => import('../../../Pages/ConnectionPage'),
+);
 const NotFound = React.lazy(() => import('../../../Pages/NotFoundPage'));
 
 const GlobalRoute = () => {
@@ -81,6 +87,24 @@ const GlobalRoute = () => {
                             element={
                                 <Suspense fallback={<LoadingFade />}>
                                     <PremiumPage />
+                                </Suspense>
+                            }
+                        />
+                        {/**********************SETTING PAGE*****************************/}
+                        <Route
+                            path={RoutePath.setting}
+                            element={
+                                <Suspense fallback={<LoadingFade />}>
+                                    <MainApplicationSettingPage />
+                                </Suspense>
+                            }
+                        />
+                        {/* ********************CONNECTION PAGE********************** */}
+                        <Route
+                            path={RoutePath.connection}
+                            element={
+                                <Suspense fallback={<LoadingFade />}>
+                                    <ConnectionPage />
                                 </Suspense>
                             }
                         />

@@ -14,9 +14,10 @@ const AuthContainer = () => {
             <section className="authContainer_btn">
                 <CustButton
                     fn={toggleForm}
-                    label="click"
+                    label={openForm ? 'Register' : 'Login'}
                     textCol="black"
                     backCol="#e2ff00"
+                    width="150px"
                 />
             </section>
             <section className="authContainer_form">

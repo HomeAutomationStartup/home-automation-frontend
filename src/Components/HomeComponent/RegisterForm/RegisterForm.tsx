@@ -1,11 +1,22 @@
 import { useForm } from 'react-hook-form';
 import CustButton from '../../Others/Button/CustButton';
-import './RegisterForm.css';
 import { Url } from './../../../Data/Constant';
 import { RegisterUser } from '../../../Services/RegisterUser';
 import { ToastContainer } from 'react-toastify';
+import { AnimatePresence, motion } from 'framer-motion';
+import WindowBackdropModel from '../../Others/FramerMotionBackdrop/WindowBackdropModel/WindowBackdropModel';
+import { useState } from 'react';
+import Policy from '../Policy/Policy';
+import './RegisterForm.css';
 
 const RegisterForm = () => {
+    const [modelOpen, setModelOpen] = useState(false);
+    const open = () => {
+        setModelOpen(true);
+    };
+    const close = () => {
+        setModelOpen(false);
+    };
     const styles = {
         p: {
             color: 'red',
@@ -141,6 +152,7 @@ const RegisterForm = () => {
                                 label="submit"
                                 textCol="black"
                                 backCol="#e2ff00"
+                                width="150px"
                             />
                         )}
 
@@ -148,12 +160,34 @@ const RegisterForm = () => {
                         !regErrors.password &&
                         !regErrors.name &&
                         !regErrors.userName && (
-                            <section className="registerForm_appPolicies">
+                            <motion.div
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="registerForm_appPolicies"
+                                onClick={() => (modelOpen ? close() : open())}
+                            >
                                 <span>Privacy Policy &amp; Cookie Policy</span>
-                            </section>
+                            </motion.div>
                         )}
                 </form>
             </section>
+            {/*************************************BACKDROP*************************************/}
+            <AnimatePresence
+                initial={false}
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+            >
+                {modelOpen && (
+                    <WindowBackdropModel
+                        backdropColor="#070B0D"
+                        handleClose={close}
+                    >
+                        <Policy />
+                    </WindowBackdropModel>
+                )}
+            </AnimatePresence>
+
+            {/*************************************BACKDROP*************************************/}
             <ToastContainer />
         </div>
     );

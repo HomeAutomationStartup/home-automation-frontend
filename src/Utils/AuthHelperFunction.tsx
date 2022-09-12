@@ -8,6 +8,10 @@ export const getAccessToken = () => {
     return accessToken;
 };
 
+export const removeAccessToken = () => {
+    localStorage.removeItem('token');
+};
+
 export const getAppAdminUser = () => {
     const adminUserName = localStorage.getItem('appUser');
     return adminUserName;
@@ -18,20 +22,32 @@ export const setAppAdminUser = (response: any) => {
     localStorage.setItem('appUser', adminUserName);
 };
 
-export const logOut = (navigate: any) => {
-    localStorage.removeItem('token');
+export const removeAppAdminUser = () => {
     localStorage.removeItem('appUser');
-    localStorage.removeItem('roomOwner');
-    navigate('/');
 };
 
-export const setProfileUser = (profileName: any) => {
-    localStorage.setItem('roomOwner', profileName);
+export const setProfileId = (profileId: any) => {
+    localStorage.setItem('profileId', profileId);
 };
-export const getProfileUser = () => {
-    const profileName = localStorage.getItem('roomOwner');
+
+export const getProfileId = () => {
+    const profileName = localStorage.getItem('profileId');
     return profileName;
 };
-export const removeProfileUser = () => {
-    localStorage.removeItem('roomOwner');
+
+export const removeProfileId = () => {
+    localStorage.removeItem('profileId');
+};
+
+export const openProfileOnClick = (profileId: any, navigate: any) => {
+    removeProfileId();
+    setProfileId(profileId);
+    navigate('/app');
+};
+
+export const logOut = (navigate: any) => {
+    removeAccessToken();
+    removeAppAdminUser();
+    removeProfileId();
+    navigate('/');
 };

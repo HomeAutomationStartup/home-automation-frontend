@@ -21,11 +21,14 @@ const SubUserTestimonialBoxAfter = (props: any) => {
                 </section>
                 <section className="userTestimonial_list_box_after_content_col_2">
                     <section className="userTestimonial_list_box_after_content_col_2_row_1">
-                        {
-                            props.items.find(
-                                (x: { id: any }) => x.id === props.selectedId,
-                            )?.description
-                        }
+                        <p>
+                            {
+                                props.items.find(
+                                    (x: { id: any }) =>
+                                        x.id === props.selectedId,
+                                )?.description
+                            }
+                        </p>
                     </section>
                     <section className="userTestimonial_list_box_after_content_col_2_row_2">
                         <span>

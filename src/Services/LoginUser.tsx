@@ -1,9 +1,14 @@
 import axios from 'axios';
-import { Url, RoutePath } from './../Data/Constant';
+import { RoutePath, Url } from './../Data/Constant';
 import { toast } from 'react-toastify';
 import 'react-toastify/ReactToastify.min.css';
 import { setAccessToken, setAppAdminUser } from '../Utils/AuthHelperFunction';
 
+const login = (response: any, navigate: any) => {
+    setAccessToken(response);
+    setAppAdminUser(response);
+    navigate(RoutePath.accountConfiguration);
+};
 export const LoginUser = async (data: any, navigate: any) => {
     const options = {
         headers: {
@@ -13,9 +18,7 @@ export const LoginUser = async (data: any, navigate: any) => {
     };
     try {
         const response = await axios.post(Url.user_login_url, data, options);
-        setAccessToken(response);
-        setAppAdminUser(response);
-        navigate(RoutePath.accountConfiguration);
+        login(response, navigate);
     } catch (error) {
         let errorDetails = (error as any)?.response.data.message;
         if (typeof errorDetails === 'object' && errorDetails !== null) {
