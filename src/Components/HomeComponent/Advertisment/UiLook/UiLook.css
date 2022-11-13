@@ -32,14 +32,14 @@
     height: 18%;
 }
 .uiLook_content_header p {
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
     color: #e2ff00;
 }
 .uiLook_content_header h1 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: calc(32px + (0 -32) * ((100vw - 1280px) / (1600 - 1280)));
+    font-size: calc(32px + (24 -32) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 /* *************************************************************************************** */
@@ -62,7 +62,7 @@
 }
 .uiLook_content_mode_child_1 p {
     margin: 0;
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 
@@ -92,12 +92,12 @@
 }
 .uiLook_content_mode_child_2 span p {
     margin: 0;
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 .uiLook_content_mode_child_2 span h1 {
     margin: 0;
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 /* ******************************************************************************* */
