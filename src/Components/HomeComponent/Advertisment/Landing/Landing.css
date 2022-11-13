@@ -45,7 +45,7 @@
     background: rgb(0, 0, 0, 0.1);
     font-weight: 700;
     mix-blend-mode: color-burn;
-    font-size: calc(18px + (8 -18) * ((100vw - 1280px) / (1600 - 1280)));
+    font-size: calc(18px + (18 -18) * ((100vw - 1280px) / (1600 - 1280)));
     line-height: 27px;
     color: #3a3a3a;
     transform: translateY(135%);
