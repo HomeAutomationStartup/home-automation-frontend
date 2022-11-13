@@ -7,7 +7,6 @@ import {
     AccountConfigurationRoomNames,
 } from '../../../Data/Constant';
 import { Url } from './../../../Data/Constant';
-import { ToastContainer } from 'react-toastify';
 import { AccountConfiguration } from './../../../Data/Constant';
 import CustButton from '../../Others/Button/CustButton';
 import './FormToAddProfile.css';
@@ -23,7 +22,9 @@ const FormToAddProfile = () => {
             background: 'rgb(255, 0, 0, 0.1)',
             padding: '0.5rem 1.5rem 0.5rem 1.5rem',
             borderRadius: '10px',
-            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+            fontSize:
+                'calc(14px + (2 -14) * ((100vw - 1280px) / (1600 - 1280)))',
+            lineHeight: '27px',
         },
     };
     const {
@@ -40,6 +41,7 @@ const FormToAddProfile = () => {
 
     const onProSubmit = (data: any) => {
         Object.assign(data, { room: room }, { picType: pic });
+        // Object.assign(data, { room: room });
         PostDataWithoutToken(Url.profile_creation_url + ADMIN, data);
         reset();
     };
@@ -65,18 +67,36 @@ const FormToAddProfile = () => {
                         !proErrors.cityName &&
                         !proErrors.countryName && (
                             <span className="formToAddProfile_proForm_header">
-                                <h1>{AccountConfiguration.form_header}</h1>
-                                <p>{AccountConfiguration.form_subHeader}</p>
+                                <h1
+                                    style={{
+                                        fontSize:
+                                            'calc(24px + (10 -24) * ((100vw - 1280px) / (1600 - 1280)))',
+                                        lineHeight: '27px',
+                                    }}
+                                >
+                                    {AccountConfiguration.form_header}
+                                </h1>
+                                <p
+                                    style={{
+                                        fontSize:
+                                            'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                                        lineHeight: '27px',
+                                    }}
+                                >
+                                    {AccountConfiguration.form_subHeader}
+                                </p>
                             </span>
                         )}
 
                     <input
                         type="text"
                         className="formToAddProfile_form_field"
-                        placeholder="Profile Name"
+                        placeholder="profile name"
                         style={{
                             marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...profileRegister('profileName', {
                             required: 'profile name is required',
@@ -99,10 +119,12 @@ const FormToAddProfile = () => {
                     <input
                         type="text"
                         className="formToAddProfile_form_field"
-                        placeholder="City Name"
+                        placeholder="city name"
                         style={{
-                            marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            marginTop: '2rem',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...profileRegister('cityName', {
                             required: 'city name is required',
@@ -125,10 +147,12 @@ const FormToAddProfile = () => {
                     <input
                         type="text"
                         className="formToAddProfile_form_field"
-                        placeholder="Country Name"
+                        placeholder="country name"
                         style={{
-                            marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            marginTop: '2rem',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...profileRegister('countryName', {
                             required: 'country name is required',
@@ -181,6 +205,13 @@ const FormToAddProfile = () => {
                         !proErrors.profileName &&
                         !proErrors.cityName &&
                         !proErrors.countryName && (
+                            //     <span className="formToAddProfile_submit_btn">
+                            //         <CustButton
+                            //             label="Submit"
+                            //             backCol="#e2ff00"
+                            //             textCol="black"
+                            //         />
+                            // </span>
                             <CustButton
                                 label="Submit"
                                 backCol="#e2ff00"
@@ -189,7 +220,6 @@ const FormToAddProfile = () => {
                         )}
                 </form>
             </section>
-            <ToastContainer />
         </div>
     );
 };

@@ -6,12 +6,16 @@ import { useState } from 'react';
 import UiBanner from '../../UiBanner/UiBanner';
 import ScrollDown from './../../../../Assets/ScrollDown.svg';
 import './UiLook.css';
+import { DarkColorRules } from '../../../../Data/Constant';
+import LazyLoadImageComp from '../../../Others/LazyLoadImageComp/LazyLoadImageComp';
+import { LandingPageTypography } from '../../../../Data/HomePageConstant';
 
 const UiLook = () => {
     const [mode, setMode] = useState<boolean>(false);
+    const color_1 = DarkColorRules.InnerBackground;
     return (
-        <div className="uiLook">
-            <section className="uiLook_content">
+        <div className="uiLook" style={{ background: color_1 }}>
+            <section className="uiLook_content" style={{ background: color_1 }}>
                 <section className="uiLook_content_header">
                     <p>APP UI DESIGN</p>
                     <h1>
@@ -66,41 +70,37 @@ const UiLook = () => {
                         {!mode && (
                             <span>
                                 <h1>Dark Mode</h1>
-                                <p>
-                                    Inspired by the very original Open Bridge
-                                    designed back in 2016, this theme balances
-                                    both contrast and performance.
-                                </p>
+                                <p>{LandingPageTypography.page_2.dark}</p>
                             </span>
                         )}
                         {mode && (
                             <span>
-                                <h1>Sun Mode </h1>
-                                <p>
-                                    This mode was created to give you the best
-                                    possible contrast in bright environments and
-                                    even direct sunlight.
-                                </p>
+                                <h1>Light Mode </h1>
+                                <p>{LandingPageTypography.page_2.light}</p>
                             </span>
                         )}
                     </span>
                 </section>
                 <section className="uiLook_content_banner">
                     <span className="uiLook_content_banner_scroll">
-                        <img
+                        <LazyLoadImageComp
                             src={ScrollDown}
-                            width="50"
-                            height="110"
+                            height="15%"
+                            width="15%"
                             alt="scroll_icon"
                         />
                     </span>
 
                     <span className="uiLook_content_banner_background">
-                        <img src={Shape} alt="banner_background" />
+                        <LazyLoadImageComp
+                            src={Shape}
+                            height="80%"
+                            width="80%"
+                            alt="banner_background"
+                        />
                     </span>
-                    <UiBanner
-                        col={mode ? 'rgb(34, 38, 42)' : 'rgb(21, 26, 30)'}
-                    />
+                    <span className="background_info">UI / UX</span>
+                    <UiBanner />
                 </section>
             </section>
         </div>

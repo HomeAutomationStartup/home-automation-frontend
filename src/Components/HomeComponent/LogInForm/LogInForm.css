@@ -1,53 +1,103 @@
-.loginForm,
-.loginForm_logForm,
-.loginForm_form_container {
+.formToLogin {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: inherit;
 }
-.loginForm {
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
-    background: rgb(7, 11, 13);
-}
 
-.loginForm_logForm {
-    width: 100%;
-    height: 100%;
+.formToLogin_logForm {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 94%;
+    height: 70%;
     position: relative;
     flex-direction: column;
     background: rgb(7, 11, 13);
+    border-radius: 0.5rem;
     transition: 0.5s;
 }
-.loginForm_form_container {
-    width: 95%;
-    height: 95%;
-    overflow-y: scroll;
-    position: relative;
-    background: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    color: rgb(173, 216, 230, 0.5);
-}
 
-.loginForm_form_container::-webkit-scrollbar {
+.formToLogin_logForm::-webkit-scrollbar {
     display: none;
 }
-.loginForm_form_field {
-    width: 80%;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(0, 0, 0, 0.2);
-    font-size: 1rem;
-    color: #656880;
-    background: rgb(34, 38, 42);
+.formToLogin_form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: inherit;
+    width: 95%;
+    height: 95%;
 }
 
-.loginForm_form_field:focus {
-    outline: none !important;
-    border: 1px solid #ff4500;
+/* *********************************************** */
+
+.formToLogin_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+}
+.formToLogin_heading h1 {
+    margin: 0;
+    font-size: calc(24px + (24 - 24) * ((100vw - 1280px) / (1600 - 1280)));
+    color: lavender;
+    line-height: 48px;
+}
+.formToLogin_heading p {
+    margin: 0;
+    font-size: calc(16px + (16 - 16) * ((100vw - 1280px) / (1600 - 1280)));
+    color: lavender;
+    line-height: 27px;
+}
+
+/* *************************************************** */
+
+.formToLogin_form_field {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid gray;
+    font-size: 1rem;
+    color: lavender !important;
+    background: rgb(34, 38, 42) !important;
     transition: 0.5s all ease;
+    margin-top: 2rem;
+}
+
+.formToLogin_form_field:focus {
+    outline-offset: 5px;
+    border: 3px solid orange;
+    transition: 0.5s all ease;
+}
+
+/* *************************************************************** */
+
+.formToLogin_toggleBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    margin-top: 1rem;
+    color: gray;
+}
+.formToLogin_toggleBtn p {
+    cursor: pointer;
+}
+.formToLogin_toggleBtn p:hover {
+    text-decoration: underline;
+    color: #1a72e6;
 }

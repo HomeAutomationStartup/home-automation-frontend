@@ -7,11 +7,11 @@ const SubUserTestimonialBox = (props: any) => {
         props.id === '4' ||
         props.id === '9' ||
         props.id === '11'
-            ? 130
+            ? 190
             : 50;
 
     return (
-        <motion.li
+        <motion.div
             layoutId={props.id}
             whileHover={{
                 scale: 0.99,
@@ -22,10 +22,10 @@ const SubUserTestimonialBox = (props: any) => {
         >
             <span className="userTestimonial_list_box_title">
                 &ldquo;
-                <b>hello moto</b>
+                <b>{props.title}</b>
                 &rdquo;
             </span>
-            <span style={{ fontSize: '16px' }}>
+            <span className="userTestimonial_list_box_description">
                 {props.description.length > MAX_LENGTH ? (
                     <p>{`${props.description.substring(0, MAX_LENGTH)}...`}</p>
                 ) : (
@@ -34,7 +34,7 @@ const SubUserTestimonialBox = (props: any) => {
             </span>
 
             <p className="userTestimonial_list_box_expand">Read more</p>
-        </motion.li>
+        </motion.div>
     );
 };
 

@@ -51,3 +51,9 @@ export const searchItem = (keyArray: any, dataArray: any) => {
     const fuse = new Fuse(dataArray, options, myIndex);
     return fuse;
 };
+
+export const camalize = (str: any) => {
+    return str
+        .toLowerCase()
+        .replace(/[^a-zA-Z0-9]+(.)/g, (m: any, chr: any) => chr.toUpperCase());
+};

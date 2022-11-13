@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(7, 11, 13);
 }
 
 .uiLook {
@@ -11,6 +10,8 @@
     height: 180vh;
     position: relative;
     color: lavender;
+    border-top-right-radius: 1.6rem;
+    border-top-left-radius: 1.6rem;
 }
 .uiLook_content {
     text-align: center;
@@ -19,7 +20,7 @@
     height: 95%;
     text-align: center;
 }
-
+/* ********************************************************************* */
 .uiLook_content_header {
     display: flex;
     align-items: flex-start;
@@ -31,14 +32,14 @@
     height: 18%;
 }
 .uiLook_content_header p {
-    font-size: 16px;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
     color: #e2ff00;
 }
 .uiLook_content_header h1 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 32px;
+    font-size: calc(32px + (0 -32) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 /* *************************************************************************************** */
@@ -52,15 +53,21 @@
     height: 8%;
 }
 .uiLook_content_mode_child_1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
     width: 20%;
     height: 100%;
 }
 .uiLook_content_mode_child_1 p {
-    font-size: 16px;
+    margin: 0;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 
 .uiLook_content_mode_child_1 ul {
+    margin: 0;
     padding-left: 0;
 }
 
@@ -75,12 +82,22 @@
     width: 70%;
     height: 100%;
 }
-.uiLook_content_mode_child_2 p {
-    font-size: 16px;
+.uiLook_content_mode_child_2 span {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.uiLook_content_mode_child_2 span p {
+    margin: 0;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
-.uiLook_content_mode_child_2 h1 {
-    font-size: 16px;
+.uiLook_content_mode_child_2 span h1 {
+    margin: 0;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 /* ******************************************************************************* */
@@ -88,15 +105,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 3rem;
+    padding-top: 2rem;
     width: 100%;
     height: 74%;
 }
 .uiLook_content_banner_scroll {
     position: absolute;
-    top: 26rem;
+    top: 25rem;
 }
 .uiLook_content_banner_background {
     position: absolute;
-    right: 2rem;
+    right: 0.1rem;
+}
+
+.background_info {
+    top: 25rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 14%;
+    font-size: calc(100px + (163 - 100) * ((100vw - 1280px) / (1600 - 1280)));
+    font-weight: 100;
+    color: rgb(128, 128, 128, 0.1);
 }

@@ -12,17 +12,37 @@
     flex-direction: column;
     height: 100%;
     padding: 0.5rem;
-    background: rgb(21, 26, 30);
 }
 
-.authContainer_btn,
 .authContainer_form {
     justify-content: center;
 }
 
 .authContainer_btn {
+    flex-direction: row;
+    justify-content: space-around;
     height: 19.3%;
-    background: rgb(7, 11, 13);
+}
+.authContainer_btn_col_1 {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lavender;
+}
+.authContainer_btn_col_2 {
+    width: 16%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: #151a1e;
+    border-radius: inherit;
+}
+.authContainer_btn p {
+    margin: 0;
 }
 
 .authContainer_form {

@@ -1,4 +1,6 @@
-export const accountConfigurationPageStyles = {
+import { DarkColorRules } from '../Data/Constant';
+
+export const ProfileConfigurationPageStyles = {
     div: {
         display: 'flex',
         justifyContent: 'center',
@@ -6,7 +8,7 @@ export const accountConfigurationPageStyles = {
         width: '100%',
         height: '100%',
         borderRadius: '0.5rem',
-        background: 'rgb(7, 11, 13)',
+        background: DarkColorRules.InnerBackground,
     },
     outerSection: {
         height: '85%',
@@ -18,7 +20,9 @@ export const accountConfigurationPageStyles = {
         borderRadius: '0.5rem',
     },
     innerSection: {
-        borderRadius: '0.5rem',
+        borderRadius: '0.6rem',
+        padding: '1rem',
+        background: DarkColorRules.OuterBackground,
     },
 };
 
@@ -46,7 +50,7 @@ export const mainApplicationPageStyles = {
         alignItems: 'center',
         justifyContent: 'space-between',
         borderRadius: '0.5rem',
-        background: 'rgb(21, 26, 30)',
+        background: '#1A1A1A',
         padding: '0.5rem',
         minWidth: '75px',
         maxWidth: '75px',
@@ -54,13 +58,13 @@ export const mainApplicationPageStyles = {
     outerList_2: {
         borderRadius: '0.5rem',
         padding: '0.5rem',
-        background: 'rgb(21, 26, 30)',
+        background: '#1A1A1A',
     },
     navSpan: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgb(7, 11, 13)',
+        backgroundColor: '#0F0F0F',
         width: '100%',
 
         borderRadius: '0.5rem',

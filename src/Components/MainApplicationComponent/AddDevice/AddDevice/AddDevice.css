@@ -1,0 +1,27 @@
+.addDevice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.addDevice_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background: rgb(7, 11, 13);
+    border-bottom-right-radius: 0.6rem;
+}
+.addDevice_form p {
+    font-size: 16px;
+}
+.addDevice_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}

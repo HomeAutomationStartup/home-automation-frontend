@@ -1,214 +1,145 @@
 import RaspberryPi from './../../../../Assets/RaspberryPi.svg';
 import NodeMCU from './../../../../Assets/NodeMCU.svg';
 import Arduino from './../../../../Assets/Arduino.svg';
-import LandingUI from './../../../../Assets/LandingUI.svg';
-import HomeSecurity from './../../../../Assets/HomeSecurity.svg';
+import ConnectDevice from './../../../../Assets/ConnectDevice.svg';
+import HomeSecurity from './../../../../Assets/CyberSecurity.svg';
 import Visual from './../../../../Assets/Visual.svg';
-import Rpa from './../../../../Assets/Rpa.svg';
-import Automation from './../../../../Assets/Automation.svg';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import './Landing.css';
+import { LandingPageTypography } from '../../../../Data/HomePageConstant';
+import BrandCanvas from '../../../Others/Canvas/BrandCanvas/BrandCanvas';
+import LazyLoadImageComp from '../../../Others/LazyLoadImageComp/LazyLoadImageComp';
 
 const Landing = () => {
-    const [count, setCount] = useState(0);
-    const [Img, setImg] = useState(Automation);
-    const changeImg = (pos: any) => {
-        setCount(pos);
+    const styles = {
+        span_1: {
+            width: '100%',
+            height: '31.5%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: '1.5rem',
+        },
+
+        span_2: {
+            width: '100%',
+            height: '80%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
     };
-    useEffect(() => {
-        if (count === 0) {
-            setImg(Automation);
-        }
-        if (count === 1) {
-            setImg(Visual);
-        }
-        if (count === 2) {
-            setImg(Rpa);
-        }
-    }, [count]);
     return (
         <div className="landing">
             <ul className="landing_content">
+                {/* firstcolumn */}
                 <li>
-                    <span className="landing_content_col_1">
-                        <span
-                            style={{
-                                width: '100%',
-                                height: '66.5%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                flexDirection: 'column',
-                            }}
-                        >
-                            <img
-                                src={Img}
-                                width="369"
-                                height="360"
+                    <section className="landing_content_col_1">
+                        <span className="landing_content_col_1_row_1_slider">
+                            <LazyLoadImageComp
+                                // src={Automation}
+                                src={Visual}
+                                // src={Rpa}
+                                height="80%"
+                                width="80%"
                                 alt="landing_img"
                             />
-                            <span
-                                style={{
-                                    width: '30%',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-around',
-                                    flexDirection: 'row',
-                                    paddingTop: '1rem',
-                                }}
-                            >
-                                <motion.span
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    className="switchBtn"
-                                    onClick={() => changeImg(0)}
-                                ></motion.span>
-                                <motion.span
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    className="switchBtn"
-                                    onClick={() => changeImg(1)}
-                                ></motion.span>
-                                <motion.span
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    className="switchBtn"
-                                    onClick={() => changeImg(2)}
-                                ></motion.span>
+
+                            <div className="landing_content_col_1_row_1_slider_bck">
+                                {LandingPageTypography.page_1.col_1_row_1}
+                            </div>
+                        </span>
+                        <span
+                            style={{
+                                width: '100%',
+                                height: '33%',
+                                borderRadius: '1.5rem',
+                                backdropFilter: 'blur(5px)',
+                            }}
+                        >
+                            <BrandCanvas />
+                        </span>
+                    </section>
+                </li>
+                {/* secondcolumn */}
+                <li>
+                    <section className="landing_content_col_2">
+                        <span className="landing_content_col_2_row_1_slider">
+                            <LazyLoadImageComp
+                                src={ConnectDevice}
+                                height="80%"
+                                width="80%"
+                                alt="landingUI"
+                            />
+                            <div className="landing_content_col_2_row_1_slider_bck">
+                                {LandingPageTypography.page_1.col_2_row_1}
+                            </div>
+                        </span>
+                        <span className="landing_content_col_2_row_2_slider">
+                            <LazyLoadImageComp
+                                src={HomeSecurity}
+                                height="80%"
+                                width="80%"
+                                alt="security"
+                            />
+                            <div className="landing_content_col_2_row_2_slider_bck">
+                                {LandingPageTypography.page_1.col_2_row_2}
+                            </div>
+                        </span>
+                    </section>
+                </li>
+                {/* thirdcolumn */}
+                <li>
+                    <section className="landing_content_col_3">
+                        <span
+                            style={{
+                                ...styles.span_1,
+                                flexDirection: 'column',
+                                background: '#6db5ca',
+                            }}
+                        >
+                            <span style={styles.span_2}>
+                                <LazyLoadImageComp
+                                    src={RaspberryPi}
+                                    height="100%"
+                                    width="100%"
+                                    alt="raspberry"
+                                />
                             </span>
                         </span>
-
                         <span
                             style={{
-                                width: '100%',
-                                height: '33.5%',
-                                color: 'white',
-                                display: 'flex',
-                                background: 'rgb(255, 255, 255, 0.1)',
-                                padding: '1rem',
-                                justifyContent: 'center',
-                                backdropFilter: 'blur(5px)',
+                                ...styles.span_1,
                                 flexDirection: 'column',
+                                background: '#b8d8e0',
                             }}
                         >
-                            <h1
-                                style={{
-                                    padding: '0',
-                                    margin: '0',
-                                    fontSize: '24px',
-                                    fontWeight: '100',
-                                }}
-                            >
-                                Connect your devices
-                            </h1>
-
-                            <p
-                                style={{
-                                    fontSize: '16px',
-                                }}
-                            >
-                                hi test your code on the go hi test your code on
-                                the go hi test your code on the go hi test your
-                                code on the go
-                            </p>
+                            <span style={styles.span_2}>
+                                <LazyLoadImageComp
+                                    src={NodeMCU}
+                                    height="80%"
+                                    width="80%"
+                                    alt="nodemcu"
+                                />
+                            </span>
                         </span>
-                    </span>
-                </li>
-                <li>
-                    <span className="landing_content_col_2_row_1">
                         <span
                             style={{
-                                width: '100%',
-                                height: '70%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <img src={LandingUI} alt="landingUI" />
-                        </span>
-
-                        <span
-                            style={{
-                                width: '100%',
-                                height: '30%',
-                                color: 'white',
-                                display: 'flex',
-                                alignItems: 'flex-start',
-                                justifyContent: 'center',
+                                ...styles.span_1,
                                 flexDirection: 'column',
-                                padding: '3rem',
+                                background: '#94b0b7',
                             }}
                         >
-                            <h1
-                                style={{
-                                    padding: '0',
-                                    margin: '0',
-                                    fontSize: '24px',
-                                    fontWeight: '100',
-                                }}
-                            >
-                                Connect your devices
-                            </h1>
-                            <p style={{ fontSize: '16px' }}>
-                                hi test your code on the go
-                            </p>
+                            <span style={styles.span_2}>
+                                <LazyLoadImageComp
+                                    src={Arduino}
+                                    height="80%"
+                                    width="80%"
+                                    // aspect-ratio="16/9"
+                                    alt="arduino"
+                                />
+                            </span>
                         </span>
-                    </span>
-                    <span className="landing_content_col_2_row_2">
-                        <span
-                            style={{
-                                width: '70%',
-                                height: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <img src={HomeSecurity} alt="security" />
-                        </span>
-                        <span
-                            style={{
-                                width: '30%',
-                                height: '100%',
-                                color: 'white',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'flex-end',
-                                padding: '1rem',
-                            }}
-                        >
-                            <h1 style={{ fontSize: '24px', fontWeight: '100' }}>
-                                Put security first
-                            </h1>
-                        </span>
-                    </span>
-                </li>
-                <li>
-                    <span className="landing_content_col_3_row_1">
-                        <img
-                            src={RaspberryPi}
-                            width="170"
-                            height="170"
-                            alt="raspberry"
-                        />
-                        <p style={{ color: 'white', fontSize: '16px' }}>
-                            Raspberry Pi
-                        </p>
-                    </span>
-                    <span className="landing_content_col_3_row_2">
-                        <img src={NodeMCU} alt="nodemcu" />
-                        <p style={{ color: 'white', fontSize: '16px' }}>
-                            Espressif Systems
-                        </p>
-                    </span>
-                    <span className="landing_content_col_3_row_3">
-                        <img src={Arduino} alt="arduino" />
-                        <p style={{ color: 'white', fontSize: '16px' }}>
-                            Arduino
-                        </p>
-                    </span>
+                    </section>
                 </li>
             </ul>
         </div>

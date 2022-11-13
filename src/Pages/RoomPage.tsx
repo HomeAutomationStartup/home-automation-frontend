@@ -1,13 +1,12 @@
-//import { BiSearchAlt2 } from 'react-icons/bi';
 import { RiAccountCircleLine } from 'react-icons/ri';
 import { IconContext } from 'react-icons';
-import { useParams, useOutletContext, useLocation } from 'react-router-dom';
+import { useLocation, useOutletContext } from 'react-router-dom';
 import NavBtn from '../Components/Others/Button/NavBtn';
 import { motion } from 'framer-motion';
+import DeviceContainer from '../Components/MainApplicationComponent/DeviceContainer/DeviceContainer';
 
 const RoomPage = () => {
     const dataValue = useOutletContext();
-    const { type } = useParams();
     const location = useLocation();
     return (
         <div
@@ -16,30 +15,28 @@ const RoomPage = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                position: 'relative',
                 width: '100%',
                 height: '100%',
                 borderRadius: '0.5rem',
             }}
         >
+            {/* ******************************************NAV SECTION***************************** */}
             <section
                 style={{
                     display: 'flex',
-                    position: 'relative',
                     width: '100%',
-                    height: '8%',
+                    height: '10%',
                     borderRadius: 'inherit',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                 }}
             >
-                {/* ***************************************************************** */}
-                <section
+                <div
                     style={{
                         width: '79.7%',
                         height: '100%',
                         borderRadius: 'inherit',
-                        background: 'rgb(7, 11, 13)',
+                        background: '#0F0F0F',
                     }}
                 >
                     <ul
@@ -72,8 +69,9 @@ const RoomPage = () => {
                             </li>
                         ))}
                     </ul>
-                </section>
-                <section
+                </div>
+
+                <div
                     style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -82,7 +80,7 @@ const RoomPage = () => {
                         width: '19.7%',
                         height: '100%',
                         borderRadius: 'inherit',
-                        background: 'rgb(7, 11, 13)',
+                        background: '#0F0F0F',
                     }}
                 >
                     <input
@@ -109,24 +107,23 @@ const RoomPage = () => {
                             <RiAccountCircleLine />
                         </IconContext.Provider>
                     </motion.div>
-                </section>
-                {/* **************************************************************** */}
+                </div>
             </section>
+            {/* ******************************************NAV SECTION******************************* */}
+            {/* ******************************************CONTENT SECTION*************************** */}
             <section
                 style={{
                     display: 'flex',
-                    padding: '1rem',
-                    position: 'relative',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    justifyContent: 'space-between',
+                    flexDirection: 'column',
                     width: '100%',
-                    height: '91%',
-                    borderRadius: 'inherit',
-                    background: 'rgb(7, 11, 13)',
+                    height: '88.7%',
                 }}
             >
-                we are in {type}
+                <DeviceContainer />
             </section>
+            {/* ******************************************CONTENT SECTION*************************** */}
         </div>
     );
 };

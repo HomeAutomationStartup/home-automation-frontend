@@ -52,7 +52,6 @@ const MainApplicationPage = () => {
 
     const onSuccess = (data: any) => {
         console.log(data);
-        toast.success('successfully fetched');
     };
     const onError = (error: any) => {
         toast.error(error.message);
@@ -142,7 +141,7 @@ const MainApplicationPage = () => {
                                 <IconContext.Provider
                                     value={{
                                         size: '2em',
-                                        color: 'yellow',
+                                        color: '#ECE88A',
                                     }}
                                 >
                                     <IoLogoFreebsdDevil />
