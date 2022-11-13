@@ -1,8 +1,6 @@
 .formToAddProfile {
     height: 100%;
     width: 100%;
-    background: rgb(34, 38, 42);
-    background: rgb(7, 11, 13);
     background: rgb(21, 26, 30);
     border-radius: inherit;
 }
@@ -22,7 +20,7 @@
     height: auto;
     flex-direction: column;
     color: lavender;
-    padding-left: 5rem;
+    padding-left: 3.8rem;
 }
 .formToAddProfile_proForm_header h1 {
     color: aqua;
@@ -36,7 +34,9 @@
 .formToAddProfile_proForm {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: initial;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     overflow: scroll;
     overflow-x: hidden;
     -ms-overflow-style: none;
@@ -45,7 +45,6 @@
     height: 93%;
     position: relative;
     flex-direction: column;
-    background: rgb(21, 26, 30);
     background: rgb(7, 11, 13);
     border-radius: 0.5rem;
     transition: 0.5s;
@@ -77,13 +76,28 @@
 /* *********************************************************** */
 .formToAddProfile_select {
     width: 80%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .formToAddProfile_roomWarning {
     color: red;
     margin-top: 40px;
     margin-bottom: 20px;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    line-height: 27px;
 }
 .formToAddProfile_roomInformation {
+    margin-top: 2rem;
     color: lavender;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    line-height: 27px;
 }
+/* .formToAddProfile_submit_btn {
+    height: 40%;
+    background: red;
+    display: flex;
+    justify-content: center;
+}
+.formToAddProfile_submit_btn:hover {
+    transform: translate(-150px, 0px);
+    transition: all 0.3s ease;
+} */

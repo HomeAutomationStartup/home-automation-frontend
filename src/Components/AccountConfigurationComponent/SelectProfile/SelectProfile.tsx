@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { useFetchData } from '../../../Hooks/useFetchData';
 import ProfileBox from '../ProfileBox/ProfileBox';
 import './SelectProfile.css';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/ReactToastify.min.css';
 import { AccountConfiguration, Url } from '../../../Data/Constant';
-import LoadingCircle from '../../Others/LoadingAnimation/LoadingCircle/LoadingCircle';
+import LoadingFade from '../../Others/LoadingAnimation/LoadingFade/LoadingFade';
 import axios from 'axios';
 import { getAppAdminUser } from '../../../Utils/AuthHelperFunction';
 import { searchItem } from '../../../Utils/CommonHelperFunction';
@@ -78,7 +78,7 @@ const SelectProfile = () => {
             <span
                 style={{
                     width: '100%',
-                    height: '84%',
+                    height: '82%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -94,7 +94,7 @@ const SelectProfile = () => {
                             alignItems: 'center',
                         }}
                     >
-                        <LoadingCircle />
+                        <LoadingFade />
                     </span>
                 )}
 
@@ -129,7 +129,6 @@ const SelectProfile = () => {
                         </ul>
                     ))}
             </span>
-            <ToastContainer />
         </div>
     );
 };

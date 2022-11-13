@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(21, 26, 30);
 }
 
 .user {
@@ -30,14 +29,14 @@
     height: 20%;
 }
 .user_content_header p {
-    font-size: 16px;
+    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
     color: #e2ff00;
 }
 .user_content_header h1 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 32px;
+    font-size: calc(32px + (0 -32) * ((100vw - 1280px) / (1600 - 1280)));
     font-weight: 500;
 }
 .user_content_banner {

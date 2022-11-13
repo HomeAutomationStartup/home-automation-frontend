@@ -60,5 +60,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 `react-query`
 `react-select`
 `fuse.js`
+`react-lazy-load-image-component`
+`blurhash` - remove
+`react-blurhash` - remove
 
 ## Fab fontSize: `calc(0.5vw + 0.5vh + 1vmin)`

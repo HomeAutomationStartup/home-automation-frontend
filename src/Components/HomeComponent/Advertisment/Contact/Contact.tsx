@@ -1,149 +1,112 @@
+import {
+    page_4_policy_list,
+    page_4_getHelp_list,
+    page_4_developers_list,
+    page_4_docs_list,
+    page_4_socialContact_list,
+} from '../../../../Data/HomePageConstant';
+import { DarkColorRules } from '../../../../Data/Constant';
 import './Contact.css';
 
 const Contact = () => {
+    const color_1 = DarkColorRules.InnerBackground;
     return (
-        <div className="contact">
-            <section className="contact_content">
+        <div className="contact" style={{ background: color_1 }}>
+            <section
+                className="contact_content"
+                style={{ background: color_1 }}
+            >
                 <section className="contact_content_info">
                     <section className="contact_content_info_contact">
-                        <h1>
-                            &reg;{' '}
-                            <span style={{ color: '#E2FF00' }}>Sparetm</span>
-                        </h1>
-                        <p>
+                        <p className="contact_content_info_contact_organization_name">
+                            &reg;&nbsp;
+                            <span
+                                style={{ color: '#E2FF00', lineHeight: '27px' }}
+                            >
+                                Sparetm
+                            </span>
+                        </p>
+                        <p style={{ lineHeight: '27px' }}>
                             Make this app better by connecting with us &#128512;
                         </p>
                         <ul className="contact_content_info_contact_list">
-                            <li>
-                                <a
-                                    href="https://github.com/HomeAutomationStartup"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    GitHub
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.google.com/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.google.com/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Contact us
-                                </a>
-                            </li>
+                            {page_4_socialContact_list.map((item) => (
+                                <li key={item?.id}>
+                                    <a
+                                        href={item?.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        {item?.name}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </section>
                     <section className="contact_content_info_others">
                         <div>
-                            <h2>DOCS</h2>
+                            <h2 style={{ lineHeight: '27px' }}>DOCS</h2>
                             <ul className="contact_content_info_others_list">
-                                <li>
-                                    <a
-                                        href="https://www.google.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Link
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.google.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Link
-                                    </a>
-                                </li>
+                                {page_4_docs_list.map((item) => (
+                                    <li key={item?.id}>
+                                        <a
+                                            href={item?.href}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {item?.name}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                         <div>
-                            <h2>DEVELOPERS</h2>
+                            <h2 style={{ lineHeight: '27px' }}>DEVELOPERS</h2>
                             <ul className="contact_content_info_others_list">
-                                <li>
-                                    <a
-                                        href="https://www.google.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Link
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.google.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Link
-                                    </a>
-                                </li>
+                                {page_4_developers_list.map((item) => (
+                                    <li key={item?.id}>
+                                        <a
+                                            href={item?.href}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {item?.name}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                         <div>
-                            <h2>GET HELP</h2>
+                            <h2 style={{ lineHeight: '27px' }}>GET HELP</h2>
                             <ul className="contact_content_info_others_list">
-                                <li>
-                                    <a
-                                        href="https://www.google.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Link
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.google.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Link
-                                    </a>
-                                </li>
+                                {page_4_getHelp_list.map((item) => (
+                                    <li key={item?.id}>
+                                        <a
+                                            href={item?.href}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {item?.name}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </section>
                 </section>
                 <section className="contact_content_copyright">
                     <ul className="contact_content_copyright_list_row_1">
-                        <li>
-                            <a
-                                href="https://www.google.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                PRIVACY POLICY
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.google.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                COOKIE POLICY
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.google.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                ABOUT
-                            </a>
-                        </li>
+                        {page_4_policy_list.map((item) => (
+                            <li key={item?.id}>
+                                <a
+                                    href={item?.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {item?.name}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                     <ul className="contact_content_copyright_list_row_2">
                         <li>

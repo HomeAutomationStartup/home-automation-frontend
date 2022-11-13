@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Policy from '../Policy/Policy';
 import './RegisterForm.css';
 
-const RegisterForm = () => {
+const RegisterForm = (props: any) => {
     const [modelOpen, setModelOpen] = useState(false);
     const open = () => {
         setModelOpen(true);
@@ -23,7 +23,9 @@ const RegisterForm = () => {
             background: 'rgb(255, 0, 0, 0.1)',
             padding: '0.5rem 1.5rem 0.5rem 1.5rem',
             borderRadius: '10px',
-            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+            fontSize:
+                'calc(14px + (2 -14) * ((100vw - 1280px) / (1600 - 1280)))',
+            lineHeight: '27px',
         },
     };
 
@@ -37,24 +39,29 @@ const RegisterForm = () => {
     });
 
     const onRegSubmit = (data: any) => {
+        console.log(data);
         RegisterUser(Url.user_registration_url, data);
         reset();
     };
 
     return (
-        <div className="registerForm">
-            <section className="registerForm_form_container">
+        <div className="formToRegister">
+            <section className="formToRegister_form_container">
                 <form
                     onSubmit={handleRegSubmit(onRegSubmit)}
-                    className="registerForm_regForm"
+                    className="formToRegister_regForm"
                 >
+                    {/* ****************************UserName field********************************* */}
+
                     <input
                         type="text"
-                        className="registerForm_form_field"
-                        placeholder="User Name"
+                        className="formToRegister_form_field"
+                        placeholder="Username"
                         style={{
                             marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...registration('userName', {
                             required: 'user name is required',
@@ -73,14 +80,16 @@ const RegisterForm = () => {
                             {(regErrors.userName as any)?.message}
                         </p>
                     )}
-
+                    {/* ************************************Name field************************************ */}
                     <input
                         type="text"
-                        className="registerForm_form_field"
-                        placeholder="Name"
+                        className="formToRegister_form_field"
+                        placeholder="Full Name"
                         style={{
                             marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...registration('name', {
                             required: 'name is required',
@@ -100,13 +109,17 @@ const RegisterForm = () => {
                         </p>
                     )}
 
+                    {/* ****************************Password field*************************** */}
+
                     <input
                         type="password"
-                        className="registerForm_form_field"
+                        className="formToRegister_form_field"
                         placeholder="Password"
                         style={{
                             marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...registration('password', {
                             required: 'password is required',
@@ -125,14 +138,16 @@ const RegisterForm = () => {
                             {(regErrors.password as any)?.message}
                         </p>
                     )}
-
+                    {/* ************************************Email field************************************ */}
                     <input
                         type="email"
-                        className="registerForm_form_field"
+                        className="formToRegister_form_field"
                         placeholder="Email"
                         style={{
                             marginTop: '1rem',
-                            fontSize: 'calc(0.5vw + 0.5vh + 1vmin)',
+                            fontSize:
+                                'calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)))',
+                            lineHeight: '27px',
                         }}
                         {...registration('email', {
                             required: 'email is required',
@@ -143,6 +158,8 @@ const RegisterForm = () => {
                             {(regErrors.email as any)?.message}
                         </p>
                     )}
+
+                    {/* ******************************Submit btn***************************** */}
 
                     {!regErrors.email &&
                         !regErrors.password &&
@@ -156,18 +173,27 @@ const RegisterForm = () => {
                             />
                         )}
 
+                    {/* *****************************Policy info***************************** */}
+                    <motion.span
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="formToRegister_toggleBtn"
+                        onClick={() => props.toggleLoginForm(true)}
+                    >
+                        <p>Have an account? Log in</p>
+                    </motion.span>
                     {!regErrors.email &&
                         !regErrors.password &&
                         !regErrors.name &&
                         !regErrors.userName && (
-                            <motion.div
-                                whileHover={{ scale: 1.2 }}
+                            <motion.span
+                                whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="registerForm_appPolicies"
+                                className="formToRegister_appPolicies"
                                 onClick={() => (modelOpen ? close() : open())}
                             >
-                                <span>Privacy Policy &amp; Cookie Policy</span>
-                            </motion.div>
+                                <p>Privacy Policy &amp; Cookie Policy</p>
+                            </motion.span>
                         )}
                 </form>
             </section>

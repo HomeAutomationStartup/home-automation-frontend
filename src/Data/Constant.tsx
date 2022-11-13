@@ -1,9 +1,15 @@
-import Shot from './../Assets/Shot.png';
+export const DarkColorRules = {
+    OuterBorder: 'black',
+    OuterBackground: 'rgb(21, 26, 30)',
+    InnerBackground: 'rgb(7, 11, 13)',
+    BorderHighLight: '',
+};
 
 export const RootUrl = {
     authMS: 'http://localhost:8085',
     gateway: 'http://localhost:8086',
 };
+
 export const Url = {
     user_registration_url: RootUrl.authMS + '/api/v1/users/create',
     user_login_url: RootUrl.authMS + '/api/v1/users/authenticate',
@@ -11,6 +17,9 @@ export const Url = {
         RootUrl.gateway + '/pra/api/v1/profiles/create?admin=',
     profiles_fetch_url: RootUrl.gateway + '/pra/api/v1/profiles/admin?admin=',
     profile_fetch_url: RootUrl.gateway + '/pra/api/v1/profiles/id?id=',
+    devices_fetch_url: RootUrl.gateway + '/dra/api/v1/devices',
+    devices_creat_url: RootUrl.gateway + '/dra/api/v1/devices/create?admin=',
+    device_status_url: RootUrl.gateway + '/dra/api/v1/devices/status?id=',
 };
 export const RoutePath = {
     home: '/',
@@ -37,206 +46,25 @@ export const AccountConfiguration = {
 export const AccountConfigurationRoomNames = [
     { roomType: 'Bathroom', value: 'Bathroom', label: 'Bathroom' },
     { roomType: 'Bedroom', value: 'Bedroom', label: 'Bedroom' },
-    { roomType: 'Dining Room', value: 'DiningRoom', label: 'Dining Room' },
-    { roomType: 'Drawing Room', value: 'DrawingRoom', label: 'Drawing Room' },
+    { roomType: 'Dining Room', value: 'Dining Room', label: 'Dining Room' },
+    { roomType: 'Drawing Room', value: 'Drawing Room', label: 'Drawing Room' },
     { roomType: 'Hall', value: 'Hall', label: 'Hall' },
     { roomType: 'Kitchen', value: 'Kitchen', label: 'Kitchen' },
-    { roomType: 'Living Room', value: 'LivingRoom', label: 'Living Room' },
+    { roomType: 'Living Room', value: 'Living Room', label: 'Living Room' },
     {
         roomType: 'Master Bedroom',
-        value: 'MasterBedroom',
+        value: 'Master Bedroom',
         label: 'Master Bedroom',
     },
     { roomType: 'Room', value: 'Room', label: 'Room' },
-    { roomType: 'Store Room', value: 'StoreRoom', label: 'Store Room' },
-    { roomType: 'Study Room', value: 'StudyRoom', label: 'Study Room' },
+    { roomType: 'Store Room', value: 'Store Room', label: 'Store Room' },
+    { roomType: 'Study Room', value: 'Study Room', label: 'Study Room' },
 ];
 export const AccountConfigurationPicsType = [
     { picType: 'Woman', value: 'Woman', label: 'Woman' },
     { picType: 'Man', value: 'Man', label: 'Man' },
     { picType: 'Girl', value: 'Girl', label: 'Girl' },
     { picType: 'Boy', value: 'Boy', label: 'Boy' },
-];
-export const UserReview = [
-    {
-        id: '1',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English..The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 4,
-    },
-    {
-        id: '2',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English..The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 3.8,
-    },
-    {
-        id: '3',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 2.5,
-    },
-    {
-        id: '4',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 1.5,
-    },
-    {
-        id: '5',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-    {
-        id: '6',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 4.5,
-    },
-    {
-        id: '7',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-    {
-        id: '8',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-    {
-        id: '9',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-    {
-        id: '10',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-    {
-        id: '11',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-    {
-        id: '12',
-        subtitle:
-            'Variants are pre-defined visual states that a component can be in. By giving a component.',
-        title: 'Shubham kumar singh',
-        description:
-            'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-        dateAndTime: '11:20AM - 29 Nov 2022',
-        rating: 5,
-    },
-];
-
-export const BlogList = [
-    {
-        id: 1,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 2,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 3,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 4,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 5,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 6,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 7,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
-    {
-        id: 8,
-        image: Shot,
-        h1: 'Now an emeritus professor at New York University School of Medicine',
-        h2: 'Fruit and vegetables',
-        p: 'Now an emeritus professor at New York University School of Medicine, Weissmann recalls the two of them sitting in a Cambridge pub and reflecting on the role of lipid sheets in separating the interior of the cell from the exterior milieu. This insight, they felt, was to cell function what the discovery of the double helix had been to genetics. Bangham had called his lipid structures “multilamellar smectic mesophases” or sometimes “Banghasomes”. It was Weissmann who proposed the more user-friendly term liposome',
-    },
 ];
 
 export const SpringSuspense = {

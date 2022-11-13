@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import SubUserTestimonialShadow from './SubUserTestimonialShadow/SubUserTestimonialShadow';
 import SubUserTestimonialBox from './SubUserTestimonialBox/SubUserTestimonialBox';
 import SubUserTestimonialBoxAfter from './SubUserTestimonialBoxAfter/SubUserTestimonialBoxAfter';
-import { UserReview as Items } from '../../../Data/Constant';
+import { page_3_userReview_list as Items } from '../../../Data/HomePageConstant';
 import './UserTestimonial.css';
 
 const UserTestimonial = () => {
@@ -27,7 +27,6 @@ const UserTestimonial = () => {
                             id={item.id}
                             key={item.id}
                             title={item.title}
-                            subtitle={item.subtitle}
                             description={item.description}
                             setSelectedId={setSelectedId}
                         />

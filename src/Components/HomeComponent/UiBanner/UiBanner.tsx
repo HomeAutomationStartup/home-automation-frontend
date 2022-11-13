@@ -1,15 +1,9 @@
 import { motion } from 'framer-motion';
-import { BlogList } from './../../../Data/Constant';
+import { page_2_content_list as Items } from '../../../Data/HomePageConstant';
+import LazyLoadImageComp from '../../Others/LazyLoadImageComp/LazyLoadImageComp';
 import './UiBanner.css';
 
-const UiBanner = (props: any) => {
-    const styles = {
-        img: {
-            height: '100%',
-            width: '100%',
-        },
-    };
-
+const UiBanner = () => {
     const imageAnimate = {
         offscreen: { x: -100, opacity: 0 },
         onscreen: {
@@ -29,39 +23,54 @@ const UiBanner = (props: any) => {
         },
     };
 
-    const Card = ({ image, h1, h2, p, id, col }: any) => {
+    const Card = ({ image1, image2, image3, h1, p, id }: any) => {
         return (
             <motion.div
-                className="card"
+                className="uiBanner_card"
                 id={id}
                 initial={'offscreen'}
                 whileInView={'onscreen'}
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{ staggerChildren: 0.5 }}
             >
-                <span className="card_infoo">
-                    <motion.h2 variants={textAnimate}>{h2}</motion.h2>
+                <span className="uiBanner_card_info">
+                    <motion.h1 variants={textAnimate}>{h1}</motion.h1>
                     <motion.p variants={textAnimate}>{p}</motion.p>
                 </span>
 
-                <motion.div className="image-container">
+                <motion.div className="uiBanner_image_container">
                     <motion.span
-                        className="image-container_img_1"
+                        className="uiBanner_image_container_img_1"
                         variants={imageAnimate}
                     >
-                        <img src={image} style={styles.img} alt="ui-design" />
+                        <LazyLoadImageComp
+                            src={image1}
+                            height="100%"
+                            width="100%"
+                            alt="ui-design"
+                        />
                     </motion.span>
                     <motion.span
-                        className="image-container_img_2"
+                        className="uiBanner_image_container_img_2"
                         variants={imageAnimate}
                     >
-                        <img src={image} style={styles.img} alt="ui-design" />
+                        <LazyLoadImageComp
+                            src={image2}
+                            height="100%"
+                            width="100%"
+                            alt="ui-design"
+                        />
                     </motion.span>
                     <motion.span
-                        className="image-container_img_3"
+                        className="uiBanner_image_container_img_3"
                         variants={imageAnimate}
                     >
-                        <img src={image} style={styles.img} alt="ui-design" />
+                        <LazyLoadImageComp
+                            src={image3}
+                            height="100%"
+                            width="100%"
+                            alt="ui-design"
+                        />
                     </motion.span>
                 </motion.div>
             </motion.div>
@@ -69,17 +78,16 @@ const UiBanner = (props: any) => {
     };
     return (
         <div className="uiBanner">
-            <span className="background_info">UI / UX</span>
-            <div className="card-wrapper">
-                {BlogList.map((item) => (
+            <div className="uiBanner_card_wrapper">
+                {Items.map((item) => (
                     <Card
                         key={item.id}
-                        image={item.image}
+                        image1={item.image1}
+                        image2={item.image2}
+                        image3={item.image3}
                         h1={item.h1}
-                        h2={item.h2}
                         p={item.p}
                         id={item.id}
-                        col={props.col}
                     />
                 ))}
             </div>

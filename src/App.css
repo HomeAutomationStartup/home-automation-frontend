@@ -2,4 +2,12 @@
     width: 100vw;
     height: 100vh;
     padding: 0.6rem;
+    /* animation: coresDancantes 2s linear infinite; */
+    /* background: rgb(173, 26, 196); */
 }
+
+/* @keyframes coresDancantes {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+} */

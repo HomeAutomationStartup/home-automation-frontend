@@ -6,14 +6,16 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import GlobalRoute from './Components/Others/GlobalRoute/GlobalRoute';
 import { useState } from 'react';
 import './App.css';
+import { DarkColorRules } from './Data/Constant';
 const queryClient = new QueryClient();
 function App() {
-    const [notificationColor] = useState('black');
+    const [notificationColor] = useState(DarkColorRules.OuterBorder);
     const responsiveValue = 0; //1270;
     const { width } = useWindowDimensions();
     return (
         <QueryClientProvider client={queryClient}>
             <div className="App" style={{ background: notificationColor }}>
+                {/* <div className="App"> */}
                 <Router>
                     {(width as number) >= responsiveValue &&
                         width !== null &&

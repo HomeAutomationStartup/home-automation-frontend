@@ -1,3 +1,9 @@
+.custButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .custButton button {
     width: 100px;
     padding-top: 10px;
