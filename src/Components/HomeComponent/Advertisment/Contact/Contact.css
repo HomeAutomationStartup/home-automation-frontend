@@ -56,13 +56,19 @@
 
 .contact_content_info_contact p {
     margin: 0;
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280))); */
 }
 
 .contact_content_info_contact_organization_name span,
 .contact_content_info_contact_organization_name {
     margin: 0;
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280))); */
 }
 
 .contact_content_info_contact_list {
@@ -129,7 +135,10 @@
     line-height: 27px;
     position: relative;
     border-right: 1px solid gray;
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280))); */
 }
 
 .contact_content_copyright_list_row_1 li a {
@@ -167,5 +176,8 @@
     padding: 0 12px;
     position: relative;
     line-height: 27px;
-    font-size: calc(12px + (0 -12) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(12px + (12 -12) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(12px + (0 -12) * ((100vw - 1280px) / (1600 - 1280))); */
 }

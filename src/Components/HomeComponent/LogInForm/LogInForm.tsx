@@ -116,15 +116,15 @@ const LogInForm = (props: any) => {
                             width="150px"
                         />
                     )}
+                    <motion.span
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="formToLogin_toggleBtn"
+                        onClick={() => props.toggleLoginForm(false)}
+                    >
+                        <p> New here! Register</p>
+                    </motion.span>
                 </form>
-                <motion.span
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="formToLogin_toggleBtn"
-                    onClick={() => props.toggleLoginForm(false)}
-                >
-                    <p> New here! Register</p>
-                </motion.span>
             </section>
             <ToastContainer />
         </div>
