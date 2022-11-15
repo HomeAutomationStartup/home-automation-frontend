@@ -56,7 +56,7 @@ const RegisterForm = (props: any) => {
                     <input
                         type="text"
                         className="formToRegister_form_field"
-                        placeholder="Username"
+                        placeholder="Username*"
                         style={{
                             marginTop: '1rem',
                             fontSize:
@@ -84,7 +84,7 @@ const RegisterForm = (props: any) => {
                     <input
                         type="text"
                         className="formToRegister_form_field"
-                        placeholder="Full Name"
+                        placeholder="Full Name*"
                         style={{
                             marginTop: '1rem',
                             fontSize:
@@ -114,7 +114,7 @@ const RegisterForm = (props: any) => {
                     <input
                         type="password"
                         className="formToRegister_form_field"
-                        placeholder="Password"
+                        placeholder="Password*"
                         style={{
                             marginTop: '1rem',
                             fontSize:
@@ -142,7 +142,7 @@ const RegisterForm = (props: any) => {
                     <input
                         type="email"
                         className="formToRegister_form_field"
-                        placeholder="Email"
+                        placeholder="Email*"
                         style={{
                             marginTop: '1rem',
                             fontSize:

@@ -54,14 +54,21 @@
 }
 
 .uiBanner_card_info h1 {
-    font-size: calc(24px + (10 -24) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(24px + (32 -24) * ((100vw - 1280px) / (1600 - 1280)));
+    /* font-size: calc(26px + (32 -26) * ((100vw - 1280px) / (1600 - 1280))); */
+    /* dev */
+    /* font-size: calc(24px + (10 -24) * ((100vw - 1280px) / (1600 - 1280))); */
     font-weight: 100;
     line-height: 47px;
     color: #00b5ff;
 }
 
 .uiBanner_card_info p {
-    font-size: calc(14px + (5 -14) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(14px + (18 -14) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(14px + (5 -14) * ((100vw - 1280px) / (1600 - 1280))); */
     font-weight: 100;
     line-height: 27px;
 }

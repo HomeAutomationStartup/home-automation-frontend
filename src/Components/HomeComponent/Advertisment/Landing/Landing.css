@@ -45,15 +45,21 @@
     background: rgb(0, 0, 0, 0.1);
     font-weight: 700;
     mix-blend-mode: color-burn;
-    /* 24, 18 */
-    font-size: calc(18px + (20 -18) * ((100vw - 1280px) / (1600 - 1280)));
+    /* pro */
+    font-size: calc(16px + (20 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(18px + (4 -18) * ((100vw - 1280px) / (1600 - 1280))); */
     line-height: 27px;
     color: #3a3a3a;
     transform: translateY(135%);
     border-radius: 1.5rem;
     backdrop-filter: blur(40px);
     transition: 0.2s ease-out;
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .landing_content_col_2_row_2_slider_bck {

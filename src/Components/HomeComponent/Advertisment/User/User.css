@@ -29,14 +29,20 @@
     height: 20%;
 }
 .user_content_header p {
-    font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(16px + (16 -16) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(16px + (0 -16) * ((100vw - 1280px) / (1600 - 1280))); */
     font-weight: 500;
     color: #e2ff00;
 }
 .user_content_header h1 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: calc(32px + (0 -32) * ((100vw - 1280px) / (1600 - 1280)));
+    /* prod */
+    font-size: calc(24px + (32 -24) * ((100vw - 1280px) / (1600 - 1280)));
+    /* dev */
+    /* font-size: calc(32px + (0 -32) * ((100vw - 1280px) / (1600 - 1280))); */
     font-weight: 500;
 }
 .user_content_banner {

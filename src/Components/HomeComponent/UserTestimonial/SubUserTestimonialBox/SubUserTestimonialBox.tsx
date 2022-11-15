@@ -2,14 +2,6 @@ import { motion } from 'framer-motion';
 import './SubUserTestimonialBox.css';
 
 const SubUserTestimonialBox = (props: any) => {
-    const MAX_LENGTH =
-        props.id === '2' ||
-        props.id === '4' ||
-        props.id === '9' ||
-        props.id === '11'
-            ? 190
-            : 50;
-
     return (
         <motion.div
             layoutId={props.id}
@@ -21,19 +13,16 @@ const SubUserTestimonialBox = (props: any) => {
             className="userTestimonial_list_box"
         >
             <span className="userTestimonial_list_box_title">
-                &ldquo;
+                &rdquo;
                 <b>{props.title}</b>
                 &rdquo;
             </span>
             <span className="userTestimonial_list_box_description">
-                {props.description.length > MAX_LENGTH ? (
-                    <p>{`${props.description.substring(0, MAX_LENGTH)}...`}</p>
-                ) : (
-                    <p>{props.description}</p>
-                )}
+                <p>{props.description}</p>
             </span>
-
-            <p className="userTestimonial_list_box_expand">Read more</p>
+            <span className="userTestimonial_list_box_expand">
+                <p style={{ fontSize: '14px' }}>Read more</p>
+            </span>
         </motion.div>
     );
 };
