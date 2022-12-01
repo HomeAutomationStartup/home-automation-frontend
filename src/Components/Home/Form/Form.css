@@ -1,0 +1,104 @@
+.form {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    padding: 1em 0.5em;
+    margin: 0 auto;
+}
+
+.form_container {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    /* justify-content: center; */
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    border-radius: inherit;
+}
+
+.form_container::-webkit-scrollbar {
+    display: none;
+}
+
+/* *************************************************** */
+
+.form_field {
+    width: 80%;
+    padding: 0.7em;
+    border-radius: inherit;
+    font-size: 1rem;
+    line-height: 24px;
+    transition: 0.5s all ease;
+    margin-top: 1em;
+    border: 3px solid grey;
+}
+
+.form_field:focus {
+    outline-offset: 5px;
+    border: 3px solid orange;
+    transition: 0.5s all ease;
+}
+
+/* *************************************************************** */
+
+.form_error {
+    color: red;
+    background: rgb(255, 0, 0, 0.1);
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 0.8rem;
+    font-size: 0.87rem;
+    line-height: 21px;
+}
+
+.form_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+/* ******************************************************** */
+
+.form_toggleBtn,
+.form_appPolicies {
+    text-align: center;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.form_toggleBtn p:hover,
+.form_appPolicies p:hover {
+    text-decoration: underline;
+    color: #1a72e6 !important;
+}
+
+/* ************************Media-Query************************* */
+
+.form_heading h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 36px;
+    color: inherit;
+}
+.form_heading p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 24px;
+    color: inherit;
+}
+
+.form_toggleBtn p,
+.form_appPolicies p {
+    color: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 24px;
+}

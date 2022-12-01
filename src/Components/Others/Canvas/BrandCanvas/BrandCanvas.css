@@ -28,15 +28,6 @@
     margin: 1.5rem;
     font-size: calc(48px + (68 - 48) * ((100vw - 1280px) / (1600 - 1280)));
 }
-/* .textContainer p {
-    opacity: 0.5;
-    color: #3a3a3a;
-    font-size: 1.5rem;
-    line-height: 27px;
-    font-weight: 700;
-    mix-blend-mode: color-burn;
-    margin: 1rem;
-} */
 
 canvas {
     width: 100%;

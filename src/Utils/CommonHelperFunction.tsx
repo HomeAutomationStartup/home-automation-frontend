@@ -3,6 +3,18 @@ import Girl from './../Assets/Girl.svg';
 import Woman from './../Assets/Woman.svg';
 import Fuse from 'fuse.js';
 
+// export const toggleDarkMode = (value: boolean) => {
+//     let mode;
+//     if (!value) {
+//         mode = LightColorRules;
+//     } else {
+//         mode = DarkColorRules;
+//     }
+//     console.log(mode);
+//     console.log(value);
+//     return mode;
+// };
+
 export const convertTheRange = (
     currentValue: any,
     in_min: any,

@@ -3,8 +3,8 @@ html {
 }
 * {
     box-sizing: border-box;
-    color: inherit;
-    font-size: inherit;
+    /* color: inherit;
+    font-size: inherit; */
 }
 body {
     margin: 0;

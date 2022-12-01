@@ -173,7 +173,7 @@ export const page_4_socialContact_list = [
 export const page_4_docs_list = [
     {
         id: 1,
-        name: 'Link',
+        name: 'Examples',
         href: 'https://www.google.com/',
     },
     {
@@ -207,17 +207,17 @@ export const page_4_developers_list = [
 export const page_4_getHelp_list = [
     {
         id: 1,
-        name: 'Link',
+        name: 'Blog Topics',
         href: 'https://www.google.com/',
     },
     {
         id: 2,
-        name: 'Link',
+        name: 'Request',
         href: 'https://www.google.com/',
     },
     {
         id: 3,
-        name: 'Link',
+        name: 'Screen Info',
         href: 'https://www.google.com/',
     },
 ];
