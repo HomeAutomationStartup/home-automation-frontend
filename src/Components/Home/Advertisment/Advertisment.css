@@ -1,0 +1,14 @@
+.advertisment_container {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.advertisment_container::-webkit-scrollbar {
+    display: none;
+}

@@ -68,7 +68,6 @@ const BrandCanvas = () => {
         <div className="brandCanvas">
             <div className="brandCanvas_textContainer">
                 <h1> {LandingPageTypography.page_1.app_name}</h1>
-                {/* <p>Latest way to automate Latest way to automate</p> */}
             </div>
             <div className="brandCanvas_canvasContainer">
                 <canvas id="brandCanvas" width="32" height="32" />

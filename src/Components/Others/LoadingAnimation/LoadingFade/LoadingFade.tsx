@@ -1,3 +1,4 @@
+import LoadingBoxAnimation from './../../../../Assets/LoadingBoxAnimation.svg';
 import './LoadingFade.css';
 
 const LoadingFade = () => {

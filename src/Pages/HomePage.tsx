@@ -1,5 +1,5 @@
-import Advertisment from '../Components/HomeComponent/Advertisment/Index';
-import AuthContainer from '../Components/HomeComponent/AuthContainer/AuthContainer';
+import Advertisment from '../Components/Home/Advertisment/Advertisment';
+import Authentication from '../Components/Home/Authentication/Authentication';
 
 const HomePage = () => {
     const styles = {
@@ -12,7 +12,7 @@ const HomePage = () => {
             gridGap: '10px',
         },
         section: {
-            borderRadius: '0.5rem',
+            borderRadius: '0.6rem',
         },
     };
     return (
@@ -21,7 +21,7 @@ const HomePage = () => {
                 <Advertisment />
             </section>
             <section style={styles.section}>
-                <AuthContainer />
+                <Authentication />
             </section>
         </div>
     );
